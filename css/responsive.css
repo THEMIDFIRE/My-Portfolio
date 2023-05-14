@@ -1,92 +1,76 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   nav {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   nav .brand {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    width: 50%;
+    order: 1;
   }
-  nav .menu-items, nav #connect {
+  nav .menu-items {
     display: none;
     width: 100%;
     position: absolute;
     top: 100%;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
+    transition: all 1s linear;
   }
-  nav #connect {
-    max-width: -webkit-fit-content;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
+  nav .menu-items li {
+    margin: 10px;
   }
-  nav input[type="checkbox"] {
-    visibility: hidden;
-  }
-  nav input[type="checkbox"]:checked + label div:first-of-type {
-    -webkit-animation: line1 1s cubic-bezier(1, 0.82, 0.165, 1) alternate forwards;
-            animation: line1 1s cubic-bezier(1, 0.82, 0.165, 1) alternate forwards;
-  }
-  nav input[type="checkbox"]:checked + label div:nth-of-type(2) {
-    opacity: 0;
-  }
-  nav input[type="checkbox"]:checked + label div:last-of-type {
-    -webkit-animation: line3 1s cubic-bezier(1, 0.82, 0.165, 1) alternate forwards;
-            animation: line3 1s cubic-bezier(1, 0.82, 0.165, 1) alternate forwards;
-  }
-  nav input[type="checkbox"]:checked + label ~ .menu-items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  nav label[for="menu"] {
+  nav label[for=menu] {
     width: 25px;
-    height: 25px;
+    height: 10px;
     cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    align-items: center;
+    order: 3;
+    position: relative;
   }
-  nav label[for="menu"] div {
+  nav label[for=menu] div {
     width: 25px;
     height: 2px;
     background: #70869B;
     border-radius: 2px;
     position: absolute;
-    -webkit-transition: .3s opacity linear .2s;
-    transition: .3s opacity linear .2s;
+    transition: 0.3s opacity linear 0.2s;
   }
-  nav label[for="menu"] div:first-of-type {
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-    -webkit-animation: line1r 1s cubic-bezier(0.68, 0.01, 0.13, 0.16) normal both;
-            animation: line1r 1s cubic-bezier(0.68, 0.01, 0.13, 0.16) normal both;
+  nav label[for=menu] div:first-of-type {
+    -webkit-animation: line1r 0.65s cubic-bezier(0.68, 0.01, 0.13, 0.16) both;
+            animation: line1r 0.65s cubic-bezier(0.68, 0.01, 0.13, 0.16) both;
   }
-  nav label[for="menu"] div:last-of-type {
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-    -webkit-animation: line3r 1s cubic-bezier(0.68, 0.01, 0.13, 0.16) normal both;
-            animation: line3r 1s cubic-bezier(0.68, 0.01, 0.13, 0.16) normal both;
+  nav label[for=menu] div:last-of-type {
+    -webkit-animation: line3r 0.65s cubic-bezier(0.68, 0.01, 0.13, 0.16) both;
+            animation: line3r 0.65s cubic-bezier(0.68, 0.01, 0.13, 0.16) both;
   }
-}
-
-@media only screen and (max-width: 480px) {
-  input[type="checkbox"]:checked + label ~ .menu-items {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  nav input[type=checkbox] {
+    visibility: hidden;
+  }
+  nav input[type=checkbox]:checked + label div:first-of-type {
+    -webkit-animation: line1 0.65s cubic-bezier(1, 0.82, 0.165, 1) both;
+            animation: line1 0.65s cubic-bezier(1, 0.82, 0.165, 1) both;
+  }
+  nav input[type=checkbox]:checked + label div:nth-of-type(2) {
+    opacity: 0;
+  }
+  nav input[type=checkbox]:checked + label div:last-of-type {
+    -webkit-animation: line3 0.65s cubic-bezier(1, 0.82, 0.165, 1) both;
+            animation: line3 0.65s cubic-bezier(1, 0.82, 0.165, 1) both;
+  }
+  nav input[type=checkbox]:checked + label ~ .menu-items {
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  }
+  .wider .menu-items {
+    background-color: rgba(110, 80, 140, 0.5);
+  }
+  .wider:hover .menu-items {
+    background: rgba(110, 80, 140, 0.7);
   }
 }
-/*# sourceMappingURL=responsive.css.map */
+@media only screen and (max-width: 480px) {
+  input[type=checkbox]:checked + label ~ .menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=responsive.css.map */

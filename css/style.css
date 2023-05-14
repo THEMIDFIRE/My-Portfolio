@@ -1,95 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Aladin&display=swap");
-@media only screen and (max-width: 600px) {
-  nav {
-    position: relative;
-  }
-  nav .menu-items, nav #connect {
-    display: none;
-  }
-  nav input[type="checkbox"] {
-    visibility: hidden;
-  }
-  nav input[type="checkbox"]:checked + label div:first-of-type {
-    -webkit-animation: line1 1s cubic-bezier(1, 0.82, 0.165, 1) alternate forwards;
-            animation: line1 1s cubic-bezier(1, 0.82, 0.165, 1) alternate forwards;
-  }
-  nav input[type="checkbox"]:checked + label div:nth-of-type(2) {
-    opacity: 0;
-  }
-  nav input[type="checkbox"]:checked + label div:last-of-type {
-    -webkit-animation: line3 1s cubic-bezier(1, 0.82, 0.165, 1) alternate forwards;
-            animation: line3 1s cubic-bezier(1, 0.82, 0.165, 1) alternate forwards;
-  }
-  nav input[type="checkbox"]:checked + label ~ .menu-items ~ #connect {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  nav input[type="checkbox"]:checked + label ~ .menu-items ~ #connect a {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-  }
-  nav label[for="menu"] {
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  nav label[for="menu"] div {
-    width: 25px;
-    height: 2px;
-    background: #70869B;
-    border-radius: 2px;
-    position: absolute;
-    -webkit-transition: .3s opacity linear .2s;
-    transition: .3s opacity linear .2s;
-  }
-  nav label[for="menu"] div:first-of-type {
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-    -webkit-animation: line1r 1s cubic-bezier(0.68, 0.01, 0.13, 0.16) normal both;
-            animation: line1r 1s cubic-bezier(0.68, 0.01, 0.13, 0.16) normal both;
-  }
-  nav label[for="menu"] div:last-of-type {
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-    -webkit-animation: line3r 1s cubic-bezier(0.68, 0.01, 0.13, 0.16) normal both;
-            animation: line3r 1s cubic-bezier(0.68, 0.01, 0.13, 0.16) normal both;
-  }
-  nav #menu {
-    display: initial;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Aladin', cursive;
+  font-family: "Aladin", cursive;
   background: #12130F;
   color: #4D6CFA;
   letter-spacing: 1px;
 }
-
 body li {
   list-style: none;
 }
-
 body a {
   text-decoration: none;
   color: #12130F;
@@ -101,18 +25,11 @@ nav {
   top: 0;
   width: 100%;
   height: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-transition: .3s linear;
-  transition: .3s linear;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.3s linear;
 }
-
 nav .brand .name {
   color: #DB3A34;
   text-transform: uppercase;
@@ -120,75 +37,60 @@ nav .brand .name {
   padding: 10px 14px;
   position: relative;
   background: transparent;
-  -webkit-transition: .5s linear;
-  transition: .5s linear;
+  transition: 0.5s linear;
 }
-
 nav .brand .name::before {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   top: 0;
   width: 0;
   height: 2px;
   border-top: 2px solid transparent;
   border-right: 2px solid transparent;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 nav .brand .name::after {
   position: absolute;
-  content: '';
+  content: "";
   bottom: 0;
   right: 0;
   width: 0;
   height: 2px;
   border-bottom: 2px solid transparent;
   border-left: 2px solid transparent;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 nav .brand .name:hover {
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
-
 nav .brand .name:hover::before {
   border-color: #DB3A34;
   height: 100%;
-  -webkit-transition: .3s width linear, .3s height linear .4s;
-  transition: .3s width linear, .3s height linear .4s;
+  transition: 0.3s width linear, 0.3s height linear 0.4s;
   width: 100%;
 }
-
 nav .brand .name:hover::after {
   border-color: #DB3A34;
   height: 100%;
-  -webkit-transition: .3s width linear, .3s height linear .4s;
-  transition: .3s width linear, .3s height linear .4s;
+  transition: 0.3s width linear, 0.3s height linear 0.4s;
   width: 100%;
 }
-
 nav .menu-items {
-  width: 32%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 50%;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  transition: all 0.3s linear;
 }
-
 nav .menu-items .link {
   color: #70869B;
   position: relative;
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
+  flex: 1 1 25%;
+  transition: 0.2s linear;
 }
-
 nav .menu-items .link::after {
-  content: '';
+  content: "";
   width: 0;
   height: 2px;
   background: #70869B;
@@ -196,37 +98,14 @@ nav .menu-items .link::after {
   position: absolute;
   bottom: 0;
   left: 0;
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
+  transition: 0.2s linear;
 }
-
 nav .menu-items .link:hover, nav .menu-items .link:focus {
   color: #4D6CFA;
 }
-
 nav .menu-items .link:hover::after, nav .menu-items .link:focus::after {
   width: 100%;
 }
-
-nav #connect a {
-  color: #4D6CFA;
-  padding: 8px 10px;
-  border-width: 2.5px;
-  border-color: #4D6CFA;
-  border-style: solid;
-  border-radius: 12px;
-  -webkit-transition: .3s linear;
-  transition: .3s linear;
-}
-
-nav #connect a:hover {
-  color: #70869B;
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  border-color: #70869B;
-  border-radius: 4px;
-}
-
 nav #menu {
   display: none;
 }
@@ -236,28 +115,13 @@ nav #menu {
   height: 10%;
   background: rgba(110, 80, 140, 0.5);
 }
-
 .wider .menu-items .link {
   color: #4D6CFA;
 }
-
 .wider .menu-items .link:hover {
   color: transparent;
   -webkit-text-stroke: 1.2px #4D6CFA;
 }
-
-.wider #connect a {
-  color: #4D6CFA;
-}
-
-.wider #connect a:hover {
-  color: transparent;
-  -webkit-text-stroke: 1.2px #4D6CFA;
-  border-color: #70869B;
-  border-radius: 4px;
-}
-
 .wider:hover {
   background: rgba(110, 80, 140, 0.7);
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
