@@ -4,23 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animation.css">
+  <script src="https://kit.fontawesome.com/c1bb2678a4.js" crossorigin="anonymous"></script>
   <title>Mohamed Magdy</title>
 </head>
 <body>
   <header>
+    <div class="brand">
+      <a href="#landing" class="name">Mohamed</a>
+    </div>
+    <input type="checkbox" id="menu">
+    <label for="menu">
+      <div id="line-1"></div>
+      <div id="line-2"></div>
+      <div id="line-3"></div> 
+    </label>
     <nav>
-      <div class="brand">
-        <a href="#home" class="name">Mohamed</a>
-      </div>
-      <input type="checkbox" id="menu">
-      <label for="menu">
-        <div id="line-1"></div>
-        <div id="line-2"></div>
-        <div id="line-3"></div> 
-      </label>
       <ul class="menu-items">
         <li><a href="#about" class="link">About</a></li>
         <li><a href="#about" class="link">Services</a></li>
@@ -30,15 +31,45 @@
     </nav>
   </header>
   <main>
-    <div id="home">
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    </div>
-    
+    <section id="landing">
+      <div class="container">
+        <div class="content">
+          <div id="lt">
+            <h3>Hello,</h3>
+            <h1 class="name">I&#39m <span>Mohamed Magdy,</span></h1>
+            <h2 class="feild">Front-end web developer</h2>
+            <p class="phrase">Freelancer based in Egypt</p>
+            <div class="btns">
+              <a href="#contact" class="contact btn">Get in touch</a>
+              <a href="#projects" class="projects btn">Projects</a>
+            </div>
+            <div class="social">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div id="rd">
+            <img src="imgs/me.png" alt="A picture of me just smiling" id="me">
+          </div>
+        </div>
+        <div id="skills">
+
+        </div>
+      </div>
+    </section>
+    <section id="about"></section>
+    <section id="services"></section>
+    <section id="projects"></section>
+    <section id="contact"></section>
   </main>
   <footer>
 
   </footer>
   <script src="js/jquery/jquery-3.6.0.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/headline.js"></script>
 </body>
 </html>
