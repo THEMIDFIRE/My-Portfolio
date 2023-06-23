@@ -85,4 +85,30 @@
   100% {
     transform: translateY(5px);
   }
-}/*# sourceMappingURL=animation.css.map */
+}
+@-webkit-keyframes openNav {
+  0% {
+    display: none;
+    top: 30%;
+  }
+  50% {
+    display: flex;
+  }
+  100% {
+    display: flex;
+    top: 100%;
+  }
+}
+@keyframes openNav {
+  0% {
+    display: none;
+    top: 30%;
+  }
+  50% {
+    display: flex;
+  }
+  100% {
+    display: flex;
+    top: 100%;
+  }
+}
