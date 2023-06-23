@@ -1,11 +1,11 @@
 $(function () {
   //Changing nav style after scrolling
   $(window).on("scroll", function () {
-    if ($(window).scrollTop() > 90) {
-      $("nav").addClass("wider");
+    if ($(window).scrollTop() > 80) {
+      $("header").addClass("wider");
     } else {
-      $("nav").removeClass("wider");
+      $("header").removeClass("wider");
     };
   });
-
+  
 });
