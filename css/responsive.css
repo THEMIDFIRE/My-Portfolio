@@ -1,32 +1,20 @@
-@media only screen and (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
+@media only screen and (max-width: 620px) {
+  header {
+    position: relative;
   }
-  nav .brand {
+  header .brand {
     width: 50%;
     order: 1;
   }
-  nav .menu-items {
-    display: none;
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    order: 2;
-    transition: all 1s linear;
-  }
-  nav .menu-items li {
-    margin: 10px;
-  }
-  nav label[for=menu] {
+  header label[for=menu] {
     width: 25px;
     height: 10px;
     cursor: pointer;
-    display: flex;
     align-items: center;
     order: 3;
     position: relative;
   }
-  nav label[for=menu] div {
+  header label[for=menu] div {
     width: 25px;
     height: 2px;
     background: #70869B;
@@ -34,43 +22,60 @@
     position: absolute;
     transition: 0.3s opacity linear 0.2s;
   }
-  nav label[for=menu] div:first-of-type {
+  header label[for=menu] div:first-of-type {
     -webkit-animation: line1r 0.65s cubic-bezier(0.68, 0.01, 0.13, 0.16) both;
             animation: line1r 0.65s cubic-bezier(0.68, 0.01, 0.13, 0.16) both;
   }
-  nav label[for=menu] div:last-of-type {
+  header label[for=menu] div:last-of-type {
     -webkit-animation: line3r 0.65s cubic-bezier(0.68, 0.01, 0.13, 0.16) both;
             animation: line3r 0.65s cubic-bezier(0.68, 0.01, 0.13, 0.16) both;
   }
-  nav input[type=checkbox] {
+  header input[type=checkbox] {
     visibility: hidden;
   }
-  nav input[type=checkbox]:checked + label div:first-of-type {
+  header input[type=checkbox]:checked + label div:first-of-type {
     -webkit-animation: line1 0.65s cubic-bezier(1, 0.82, 0.165, 1) both;
             animation: line1 0.65s cubic-bezier(1, 0.82, 0.165, 1) both;
   }
-  nav input[type=checkbox]:checked + label div:nth-of-type(2) {
+  header input[type=checkbox]:checked + label div:nth-of-type(2) {
     opacity: 0;
   }
-  nav input[type=checkbox]:checked + label div:last-of-type {
+  header input[type=checkbox]:checked + label div:last-of-type {
     -webkit-animation: line3 0.65s cubic-bezier(1, 0.82, 0.165, 1) both;
             animation: line3 0.65s cubic-bezier(1, 0.82, 0.165, 1) both;
   }
-  nav input[type=checkbox]:checked + label ~ .menu-items {
+  header input[type=checkbox]:checked + label ~ nav {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    -webkit-animation: openNav 0.5s linear both;
+            animation: openNav 0.5s linear both;
   }
-  .wider .menu-items {
-    background-color: rgba(110, 80, 140, 0.5);
+  header nav {
+    display: none;
+    order: 2;
+    margin: auto;
+    width: 100%;
+    transition: all 0.3s linear;
   }
-  .wider:hover .menu-items {
+  header nav .menu-items {
+    justify-content: center !important;
+  }
+  header nav .menu-items li {
+    margin: 10px;
+  }
+  .wider {
+    background: rgba(110, 80, 140, 0.5);
+  }
+  .wider nav {
+    background: rgba(110, 80, 140, 0.5);
+  }
+  .wider:hover {
+    background: rgba(110, 80, 140, 0.7);
+  }
+  .wider:hover nav {
     background: rgba(110, 80, 140, 0.7);
   }
 }
-@media only screen and (max-width: 480px) {
-  input[type=checkbox]:checked + label ~ .menu-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}/*# sourceMappingURL=responsive.css.map */
