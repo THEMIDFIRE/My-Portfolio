@@ -6,6 +6,7 @@
 }
 
 body {
+  scroll-behavior: smooth;
   font-family: "Aladin", cursive;
   background: #12130F;
   color: #4D6CFA;
@@ -33,7 +34,7 @@ header {
   z-index: 9;
   transition: all 0.3s linear;
 }
-header .brand .name {
+header .brandName .name {
   color: #DB3A34;
   text-transform: uppercase;
   font-weight: 700;
@@ -42,7 +43,7 @@ header .brand .name {
   background: transparent;
   transition: 0.5s linear;
 }
-header .brand .name::before {
+header .brandName .name::before {
   position: absolute;
   content: "";
   left: 0;
@@ -53,7 +54,7 @@ header .brand .name::before {
   border-right: 2px solid transparent;
   box-sizing: border-box;
 }
-header .brand .name::after {
+header .brandName .name::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -64,16 +65,16 @@ header .brand .name::after {
   border-left: 2px solid transparent;
   box-sizing: border-box;
 }
-header .brand .name:hover {
+header .brandName .name:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
-header .brand .name:hover::before {
+header .brandName .name:hover::before {
   border-color: #DB3A34;
   height: 100%;
   transition: 0.3s width linear, 0.3s height linear 0.4s;
   width: 100%;
 }
-header .brand .name:hover::after {
+header .brandName .name:hover::after {
   border-color: #DB3A34;
   height: 100%;
   transition: 0.3s width linear, 0.3s height linear 0.4s;
@@ -152,11 +153,93 @@ main #landing .container .content {
   align-items: center;
   flex-wrap: wrap;
 }
-main #landing .container .content #lt {
-  order: 2;
+main #landing .container .content #lt .btns, main #landing .container .content #lt .social {
+  display: flex;
+  justify-content: space-around;
 }
-main #landing .container .content #rd {
-  order: 2;
+main #landing .container .content #lt .btns {
+  margin-block: 12px;
+}
+main #landing .container .content #lt .btns .btn {
+  position: relative;
+  color: #70869B;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 12px;
+  padding: 6px 14px;
+  transition: 0.4s linear;
+}
+main #landing .container .content #lt .btns .btn:hover {
+  color: #4D6CFA;
+}
+main #landing .container .content #lt .btns .contact {
+  color: #DB3A34;
+  transition: all 0.4s linear;
+  z-index: 1;
+}
+main #landing .container .content #lt .btns .contact::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: #DB3A34;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+  top: 0;
+  border-radius: 12px;
+  z-index: -1;
+}
+main #landing .container .content #lt .btns .contact:hover {
+  color: whitesmoke;
+}
+main #landing .container .content #lt .btns .contact:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+main #landing .container .content #lt .social .icon {
+  transform-style: preserve-3d;
+  transform: rotate(-25deg) skew(25deg);
+  transition: 0.4s ease-in-out;
+}
+main #landing .container .content #lt .social .icon:hover {
+  transform: rotate(0) skew(0);
+}
+main #landing .container .content #lt .social .icon .brand {
+  transition: all 0.4s ease-in-out;
+}
+main #landing .container .content #lt .social .fa-github {
+  color: #999;
+}
+main #landing .container .content #lt .social .fa-github:hover {
+  color: #fafafa;
+}
+main #landing .container .content #lt .social .fa-linkedin {
+  color: #999;
+}
+main #landing .container .content #lt .social .fa-linkedin:hover {
+  color: #0a66c2;
+}
+main #landing .container .content #lt .social .fa-twitter {
+  color: #999;
+}
+main #landing .container .content #lt .social .fa-twitter:hover {
+  color: #1da1f2;
+}
+main #landing .container .content #lt .social .fa-facebook {
+  color: #999;
+}
+main #landing .container .content #lt .social .fa-facebook:hover {
+  color: #1778f2;
+}
+main #landing .container .content #lt .social .fa-instagram {
+  color: #999;
+  padding: 1px 2px;
+  border-radius: 6px;
+}
+main #landing .container .content #lt .social .fa-instagram:hover {
+  color: white;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 main #landing .container .content #rd #blob {
   position: relative;
@@ -164,4 +247,4 @@ main #landing .container .content #rd #blob {
 }
 main #landing .container .content #rd #me {
   width: 80%;
-}
+}/*# sourceMappingURL=style.css.map */
