@@ -1,7 +1,6 @@
 @media only screen and (max-width: 768px) {
-  main #landing .container .content {
-    display: flex;
-    flex-direction: column;
+  main #landing .container #lt .btnx, main #landing .container #lt .social {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 620px) {
@@ -83,5 +82,15 @@
   }
   .wider:hover nav {
     background: rgba(110, 80, 140, 0.7);
+  }
+  main #landing .container {
+    min-width: 100%;
+    flex-direction: column;
+  }
+  main #landing .container #lt, main #landing .container #rd {
+    width: auto !important;
+  }
+  main #landing .container #lt .btns, main #landing .container #lt .social {
+    width: 100% !important;
   }
 }/*# sourceMappingURL=responsive.css.map */

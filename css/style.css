@@ -138,7 +138,7 @@ main {
   font-size: 1.45em;
 }
 main section {
-  height: 100vh;
+  min-height: 100vh;
 }
 main #landing {
   background: radial-gradient(circle farthest-side at 124% 50%, #004e92 0, #004e92 4%, #000428 77%, #000428 100%);
@@ -146,21 +146,30 @@ main #landing {
   background-size: auto auto;
   background-attachment: fixed;
 }
-main #landing .container .content {
+main #landing .container {
   min-height: 100vh;
+  max-width: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+main #landing .container #lt {
+  width: 50%;
+}
+main #landing .container #lt .btns, main #landing .container #lt .social {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  width: 60%;
 }
-main #landing .container .content #lt .btns, main #landing .container .content #lt .social {
-  display: flex;
-  justify-content: space-around;
-}
-main #landing .container .content #lt .btns {
+main #landing .container #lt .btns {
   margin-block: 12px;
 }
-main #landing .container .content #lt .btns .btn {
+main #landing .container #lt .btns .btn {
   position: relative;
   color: #70869B;
   border-width: 1px;
@@ -169,15 +178,15 @@ main #landing .container .content #lt .btns .btn {
   padding: 6px 14px;
   transition: 0.4s linear;
 }
-main #landing .container .content #lt .btns .btn:hover {
+main #landing .container #lt .btns .btn:hover {
   color: #4D6CFA;
 }
-main #landing .container .content #lt .btns .contact {
+main #landing .container #lt .btns .contact {
   color: #DB3A34;
   transition: all 0.4s linear;
   z-index: 1;
 }
-main #landing .container .content #lt .btns .contact::after {
+main #landing .container #lt .btns .contact::after {
   content: "";
   width: 0;
   height: 100%;
@@ -189,62 +198,73 @@ main #landing .container .content #lt .btns .contact::after {
   border-radius: 12px;
   z-index: -1;
 }
-main #landing .container .content #lt .btns .contact:hover {
+main #landing .container #lt .btns .contact:hover {
   color: whitesmoke;
 }
-main #landing .container .content #lt .btns .contact:hover::after {
+main #landing .container #lt .btns .contact:hover::after {
   right: auto;
   left: 0;
   width: 100%;
 }
-main #landing .container .content #lt .social .icon {
+main #landing .container #lt .social .icon {
   transform-style: preserve-3d;
   transform: rotate(-25deg) skew(25deg);
   transition: 0.4s ease-in-out;
 }
-main #landing .container .content #lt .social .icon:hover {
+main #landing .container #lt .social .icon:hover {
   transform: rotate(0) skew(0);
 }
-main #landing .container .content #lt .social .icon .brand {
+main #landing .container #lt .social .icon .brand {
   transition: all 0.4s ease-in-out;
 }
-main #landing .container .content #lt .social .fa-github {
+main #landing .container #lt .social .fa-github {
   color: #999;
 }
-main #landing .container .content #lt .social .fa-github:hover {
+main #landing .container #lt .social .fa-github:hover {
   color: #fafafa;
 }
-main #landing .container .content #lt .social .fa-linkedin {
+main #landing .container #lt .social .fa-linkedin {
   color: #999;
 }
-main #landing .container .content #lt .social .fa-linkedin:hover {
+main #landing .container #lt .social .fa-linkedin:hover {
   color: #0a66c2;
 }
-main #landing .container .content #lt .social .fa-twitter {
+main #landing .container #lt .social .fa-twitter {
   color: #999;
 }
-main #landing .container .content #lt .social .fa-twitter:hover {
+main #landing .container #lt .social .fa-twitter:hover {
   color: #1da1f2;
 }
-main #landing .container .content #lt .social .fa-facebook {
+main #landing .container #lt .social .fa-facebook {
   color: #999;
 }
-main #landing .container .content #lt .social .fa-facebook:hover {
+main #landing .container #lt .social .fa-facebook:hover {
   color: #1778f2;
 }
-main #landing .container .content #lt .social .fa-instagram {
+main #landing .container #lt .social .fa-instagram {
   color: #999;
   padding: 1px 2px;
   border-radius: 6px;
 }
-main #landing .container .content #lt .social .fa-instagram:hover {
+main #landing .container #lt .social .fa-instagram:hover {
   color: white;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
-main #landing .container .content #rd #blob {
-  position: relative;
-  transform: translate(0, 50%);
+main #landing .container #rd {
+  width: 50%;
 }
-main #landing .container .content #rd #me {
+main #landing .container #rd img {
   width: 80%;
+  -webkit-mask-image: url(/imgs/blob-haikei.png);
+          mask-image: url(/imgs/blob-haikei.png);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  -webkit-mask-position: 47% 79%;
+          mask-position: 47% 79%;
+  background-image: url(/imgs/blob-haikei.png);
+  background-position: 42% 100%;
+  background-repeat: no-repeat;
+  background-size: 163%;
 }/*# sourceMappingURL=style.css.map */

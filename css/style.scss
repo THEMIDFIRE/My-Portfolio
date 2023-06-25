@@ -149,7 +149,7 @@ header {
 main {
     font-size: 1.45em;
     section {
-        height: min(100vh, 100vh);
+        min-height: 100vh;
     }
     // Start Landing Page styling
     #landing {
@@ -158,114 +158,124 @@ main {
         background-size: auto auto;
         background-attachment: fixed;
         .container {
-            .content {
-                min-height: 100vh;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                flex-wrap: wrap;
-                #lt {
-                    .btns, .social {
-                        display: flex;
-                        justify-content: space-around;
-                    }
-                    .btns {
-                        margin-block: 12px;
-                        .btn {
-                            position: relative;
-                            color: $secondary;
-                            border: {
-                                width: 1px;
-                                style: solid;
-                                radius: 12px;
-                            };
-                            padding: 6px 14px;
-                            transition: .4s linear;
-                            &:hover {
-                                color: $txt;
-                            }
+            min-height: 100vh;
+            max-width: 80%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: auto;
+            #lt {
+                width: 50%;
+                .btns, .social {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    width: 60%;
+                }
+                .btns {
+                    margin-block: 12px;
+                    .btn {
+                        position: relative;
+                        color: $secondary;
+                        border: {
+                            width: 1px;
+                            style: solid;
+                            radius: 12px;
+                        };
+                        padding: 6px 14px;
+                        transition: .4s linear;
+                        &:hover {
+                            color: $txt;
                         }
-                        .contact {
-                            color: $primary;
-                            transition: all .4s linear;
-                            z-index: 1;
+                    }
+                    .contact {
+                        color: $primary;
+                        transition: all .4s linear;
+                        z-index: 1;
+                        &::after {
+                            content: '';
+                            width: 0;
+                            height: 100%;
+                            background: $primary;
+                            position: absolute;
+                            transition: all .4s ease-in-out;
+                            right: 0;
+                            top: 0;
+                            border-radius: 12px;
+                            z-index: -1;
+                        }
+                        &:hover {
+                            color: whitesmoke;
                             &::after {
-                                content: '';
-                                width: 0;
-                                height: 100%;
-                                background: $primary;
-                                position: absolute;
-                                transition: all .4s ease-in-out;
-                                right: 0;
-                                top: 0;
-                                border-radius: 12px;
-                                z-index: -1;
-                            }
-                            &:hover {
-                                color: whitesmoke;
-                                &::after {
-                                    right: auto;
-                                    left: 0;
-                                    width: 100%;
-                                }
-                            }
-                        }
-                    }
-                    .social {
-                        .icon {
-                            transform-style: preserve-3d;
-                            transform: rotate(-25deg) skew(25deg);
-                            transition: .4s ease-in-out;
-                            &:hover {
-                                transform: rotate(0) skew(0);
-                            }
-                            .brand {
-                                transition: all .4s ease-in-out;
-                            }
-                        }
-                        .fa-github {
-                            color: $brand;
-                            &:hover {
-                                color: $githover;
-                            }
-                        }
-                        .fa-linkedin {
-                            color: $brand;
-                            &:hover {
-                                color: $inhover;
-                            }
-                        }
-                        .fa-twitter {
-                            color: $brand;
-                            &:hover {
-                                color: $twhover;
-                            }
-                        }
-                        .fa-facebook {
-                            color: $brand;
-                            &:hover {
-                                color: $fbhover;
-                            }
-                        }
-                        .fa-instagram {
-                            color: $brand;
-                            padding: 1px 2px;
-                            border-radius: 6px;
-                            &:hover {
-                                color: white;
-                                background: $ighover;
+                                right: auto;
+                                left: 0;
+                                width: 100%;
                             }
                         }
                     }
                 }
-                #rd {
-                    #blob {
-                        position: relative;
-                        transform: translate(0, 50%);
+                .social {
+                    .icon {
+                        transform-style: preserve-3d;
+                        transform: rotate(-25deg) skew(25deg);
+                        transition: .4s ease-in-out;
+                        &:hover {
+                            transform: rotate(0) skew(0);
+                        }
+                        .brand {
+                            transition: all .4s ease-in-out;
+                        }
                     }
-                    #me {
-                        width: 80%;
+                    .fa-github {
+                        color: $brand;
+                        &:hover {
+                            color: $githover;
+                        }
                     }
+                    .fa-linkedin {
+                            color: $brand;
+                            &:hover {
+                                color: $inhover;
+                            }
+                    }
+                    .fa-twitter {
+                        color: $brand;
+                        &:hover {
+                            color: $twhover;
+                        }
+                    }
+                    .fa-facebook {
+                        color: $brand;
+                        &:hover {
+                            color: $fbhover;
+                        }
+                    }
+                    .fa-instagram {
+                        color: $brand;
+                        padding: 1px 2px;
+                        border-radius: 6px;
+                        &:hover {
+                            color: white;
+                            background: $ighover;
+                        }
+                    }
+                }
+            }
+            #rd {
+                width: 50%;
+                img {
+                    width: 80%;
+                    mask-image: url(/imgs/blob-haikei.png);
+                    mask-repeat: no-repeat;
+                    mask-size: cover;
+                    mask-position: 47% 79%;
+                    background-image: url(/imgs/blob-haikei.png);
+                    background-position: 42% 100%;
+                    background-repeat: no-repeat;
+                    background-size: 163%;
                 }
             }
         }

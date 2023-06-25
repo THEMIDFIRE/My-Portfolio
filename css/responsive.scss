@@ -4,9 +4,10 @@
     main {
         #landing {
             .container {
-                .content {
-                    display: flex;
-                    flex-direction: column;
+                #lt {
+                    .btnx, .social {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -89,6 +90,22 @@
             background: rgba($color: $accent, $alpha: .7);
             nav {
                 background: rgba($color: $accent, $alpha: .7);
+            }
+        }
+    }
+    main {
+        #landing {
+            .container {
+                min-width: 100%;
+                flex-direction: column;
+                #lt, #rd {
+                    width: auto !important;
+                }
+                #lt {
+                    .btns, .social {
+                        width: 100% !important;
+                    }
+                }
             }
         }
     }
