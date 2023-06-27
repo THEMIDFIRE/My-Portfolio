@@ -255,16 +255,10 @@ main #landing .container #rd {
 }
 main #landing .container #rd img {
   width: 80%;
-  -webkit-mask-image: url(/imgs/blob-haikei.png);
-          mask-image: url(/imgs/blob-haikei.png);
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-          mask-size: cover;
-  -webkit-mask-position: 47% 79%;
-          mask-position: 47% 79%;
-  background-image: url(/imgs/blob-haikei.png);
-  background-position: 42% 100%;
+  background-image: url(../imgs/blob-haikei.svg);
   background-repeat: no-repeat;
-  background-size: 163%;
+  background-size: 145%;
+  background-position: 44% 139%;
+  border-end-end-radius: 54% 50%;
+  border-end-start-radius: 33% 24%;
 }/*# sourceMappingURL=style.css.map */
