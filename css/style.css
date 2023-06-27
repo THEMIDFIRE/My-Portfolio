@@ -255,7 +255,7 @@ main #landing .container #rd {
 }
 main #landing .container #rd img {
   width: 80%;
-  background-image: url(imgs/blob-haikei.svg);
+  background-image: url(../imgs/blob-haikei.svg);
   background-repeat: no-repeat;
   background-size: 160%;
   background-position: 42% 130%;
