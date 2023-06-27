@@ -11,7 +11,7 @@
 body {
     scroll-behavior: smooth;
     font-family: 'Aladin', cursive;
-    background: $bg /* url(/bg.png) */;
+    background: $bg;
     color: $txt;
     letter-spacing: 1px;
     li {
@@ -268,7 +268,7 @@ main {
                 width: 50%;
                 img {
                     width: 80%;
-                    background-image: url(../imgs/blob-haikei.svg);
+                    background-image: url(imgs/blob-haikei.svg);
                     background-repeat: no-repeat;
                     background-size: 160%;
                     background-position: 42% 130%;
