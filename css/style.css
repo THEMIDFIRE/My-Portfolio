@@ -22,30 +22,6 @@ body a {
   text-decoration: none;
   color: #6E508C;
 }
-body section {
-  min-height: 100vh;
-  margin-bottom: 50px;
-  position: relative;
-}
-body section h3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(3.5) rotate(-20deg);
-  color: transparent;
-  -webkit-text-stroke: 0.22px #4D6CFA;
-  z-index: -1;
-}
-body .container {
-  min-height: 100vh;
-  max-width: 80%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: auto;
-}
 
 header {
   display: flex;
@@ -163,6 +139,30 @@ header nav .menu-items .link:hover::after, header nav .menu-items .link:focus::a
 
 main {
   font-size: 1.45em;
+}
+main section {
+  min-height: 100vh;
+  margin-bottom: 50px;
+  position: relative;
+}
+main section .container {
+  min-height: 100vh;
+  max-width: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+main section .container h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(3.5) rotate(-20deg);
+  color: transparent;
+  -webkit-text-stroke: 0.22px #4D6CFA;
+  z-index: -1;
 }
 main #landing {
   background: radial-gradient(circle farthest-side at 124% 50%, #004e92 0, #004e92 4%, #000428 77%, #000428 100%);

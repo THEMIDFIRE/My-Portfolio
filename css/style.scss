@@ -23,30 +23,6 @@ body {
         text-decoration: none;
         color: $accent;
     }
-    section {
-        min-height: 100vh;
-        margin-bottom: 50px;
-        position: relative;
-        h3 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(3.5) rotate(-20deg);
-            color: transparent;
-            -webkit-text-stroke: .22px $txt;
-            z-index: -1;
-        }
-    }
-    .container {
-        min-height: 100vh;
-        max-width: 80%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        margin: auto;
-    }
 }
 
 // Start Navigation bar styling
@@ -174,6 +150,30 @@ header {
 // Start Main page styling
 main {
     font-size: 1.45em;
+    section {
+        min-height: 100vh;
+        margin-bottom: 50px;
+        position: relative;
+        .container {
+            min-height: 100vh;
+            max-width: 80%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: auto;
+            h3 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(3.5) rotate(-20deg);
+                color: transparent;
+                -webkit-text-stroke: .22px $txt;
+                z-index: -1;
+            }
+        }
+    }
     // Start Landing Page styling
     #landing {
         background: radial-gradient(circle farthest-side at 124% 50%, #004e92 0, #004e92 4%, #000428 77%, #000428 100%);
