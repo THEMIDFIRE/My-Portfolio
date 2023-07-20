@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
 
 @import "colors.scss";
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -9,9 +12,8 @@
 }
 
 body {
-    scroll-behavior: smooth;
     font-family: 'Aladin', cursive;
-    background: $bg /* url(/bg.png) */;
+    background: $bg;
     color: $txt;
     letter-spacing: 1px;
     li {
@@ -20,6 +22,30 @@ body {
     a {
         text-decoration: none;
         color: $accent;
+    }
+    section {
+        min-height: 100vh;
+        margin-bottom: 50px;
+        position: relative;
+        h3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(3.5) rotate(-20deg);
+            color: transparent;
+            -webkit-text-stroke: .22px $txt;
+            z-index: -1;
+        }
+    }
+    .container {
+        min-height: 100vh;
+        max-width: 80%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: auto;
     }
 }
 
@@ -148,136 +174,134 @@ header {
 // Start Main page styling
 main {
     font-size: 1.45em;
-    section {
-        min-height: 100vh;
-    }
     // Start Landing Page styling
     #landing {
         background: radial-gradient(circle farthest-side at 124% 50%, #004e92 0, #004e92 4%, #000428 77%, #000428 100%);
         background-position: 50% 50%;
         background-size: auto auto;
         background-attachment: fixed;
-        .container {
-            min-height: 100vh;
-            max-width: 80%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            margin: auto;
-            #lt {
-                width: 50%;
-                .btns, .social {
-                    display: flex;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    width: 60%;
-                }
-                .btns {
-                    margin-block: 12px;
-                    .btn {
-                        position: relative;
-                        color: $secondary;
-                        border: {
-                            width: 1px;
-                            style: solid;
-                            radius: 12px;
-                        };
-                        padding: 6px 14px;
-                        transition: .4s linear;
-                        &:hover {
-                            color: $txt;
-                        }
+        .lt {
+            width: 50%;
+            .btns, .social {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 60%;
+            }
+            .btns {
+                margin-block: 12px;
+                .btn {
+                    position: relative;
+                    color: $secondary;
+                    border: {
+                        width: 1px;
+                        style: solid;
+                        radius: 12px;
+                    };
+                    padding: 6px 14px;
+                    transition: .4s linear;
+                    &:hover {
+                        color: $txt;
                     }
-                    .contact {
-                        color: $primary;
-                        transition: all .4s linear;
-                        z-index: 1;
+                }
+                .contact {
+                    color: $primary;
+                    transition: all .4s linear;
+                    z-index: 1;
+                    &::after {
+                        content: '';
+                        width: 0;
+                        height: 100%;
+                        background: $primary;
+                        position: absolute;
+                        transition: all .4s ease-in-out;
+                        right: 0;
+                        top: 0;
+                        border-radius: 12px;
+                        z-index: -1;
+                    }
+                    &:hover {
+                        color: whitesmoke;
                         &::after {
-                            content: '';
-                            width: 0;
-                            height: 100%;
-                            background: $primary;
-                            position: absolute;
-                            transition: all .4s ease-in-out;
-                            right: 0;
-                            top: 0;
-                            border-radius: 12px;
-                            z-index: -1;
-                        }
-                        &:hover {
-                            color: whitesmoke;
-                            &::after {
-                                right: auto;
-                                left: 0;
-                                width: 100%;
-                            }
-                        }
-                    }
-                }
-                .social {
-                    .icon {
-                        transform-style: preserve-3d;
-                        transform: rotate(-25deg) skew(25deg);
-                        transition: .4s ease-in-out;
-                        &:hover {
-                            transform: rotate(0) skew(0);
-                        }
-                        .brand {
-                            transition: all .4s ease-in-out;
-                        }
-                    }
-                    .fa-github {
-                        color: $brand;
-                        &:hover {
-                            color: $githover;
-                        }
-                    }
-                    .fa-linkedin {
-                            color: $brand;
-                            &:hover {
-                                color: $inhover;
-                            }
-                    }
-                    .fa-twitter {
-                        color: $brand;
-                        &:hover {
-                            color: $twhover;
-                        }
-                    }
-                    .fa-facebook {
-                        color: $brand;
-                        &:hover {
-                            color: $fbhover;
-                        }
-                    }
-                    .fa-instagram {
-                        color: $brand;
-                        padding: 1px 2px;
-                        border-radius: 6px;
-                        &:hover {
-                            color: white;
-                            background: $ighover;
+                            right: auto;
+                            left: 0;
+                            width: 100%;
                         }
                     }
                 }
             }
-            #rd {
-                width: 50%;
-                img {
-                    width: 80%;
-                    background-image: url(../imgs/blob-haikei.png);
-                    background-repeat: no-repeat;
-                    background-size: 160%;
-                    background-position: 42% 130%;
-                    border-end-end-radius: 54% 50%;
-                    border-end-start-radius: 33% 24%;
+            .social {
+                .icon {
+                    transform-style: preserve-3d;
+                    transform: rotate(-25deg) skew(25deg);
+                    transition: .4s ease-in-out;
+                    &:hover {
+                        transform: rotate(0) skew(0);
+                    }
+                    .brand {
+                        transition: all .4s ease-in-out;
+                    }
                 }
+                .fa-github {
+                    color: $brand;
+                    &:hover {
+                        color: $githover;
+                    }
+                }
+                .fa-linkedin {
+                    color: $brand;
+                    &:hover {
+                        color: $inhover;
+                    }
+                }
+                .fa-twitter {
+                    color: $brand;
+                    &:hover {
+                        color: $twhover;
+                    }
+                }
+                .fa-facebook {
+                    color: $brand;
+                    &:hover {
+                        color: $fbhover;
+                    }
+                }
+                .fa-instagram {
+                    color: $brand;
+                    padding: 1px 2px;
+                    border-radius: 6px;
+                    &:hover {
+                        color: white;
+                        background: $ighover;
+                    }
+                }
+            }
+        }
+        .rd {
+            width: 50%;
+            img {
+                width: 80%;
+                background-image: url(../imgs/blob-haikei.png);
+                background-repeat: no-repeat;
+                background-size: 160%;
+                background-position: 42% 130%;
+                border-end-end-radius: 54% 50%;
+                border-end-start-radius: 33% 24%;
             }
         }
     }
     // End Landing Page styling
+    // Start About me styling
+    #about {
+        background-color: rgba($color: $secondary, $alpha: .1);
+    }
+    // End About me styling
+    
 }
 // End Main page styling
+// Start Footer styling
+footer {
+    text-align: center;
+}
+// End Footer styling
