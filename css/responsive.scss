@@ -2,12 +2,20 @@
 // iPads, Tablets
 @media only screen and (max-width: 768px) {
     main {
-        #landing {
+        section {
             .container {
-                #lt {
-                    .btnx, .social {
-                        width: 100%;
-                    }
+                max-width: 80%;
+                flex-direction: column;
+            }
+        }
+        #landing {
+            text-align: center;
+            .ld, .rt {
+                width: 100%;
+            }
+            .ld {
+                .btns, .social {
+                    width: 100%;
                 }
             }
         }
@@ -74,7 +82,7 @@
             width: 100%;
             transition: all .3s linear;
             .menu-items {
-                justify-content: center !important;
+                justify-content: center;
                 li {
                     margin: 10px;
                 }
@@ -95,16 +103,9 @@
     }
     main {
         #landing {
-            .container {
-                min-width: 100%;
-                flex-direction: column;
-                #lt, #rd {
-                    width: auto !important;
-                }
-                #lt {
-                    .btns, .social {
-                        width: 100% !important;
-                    }
+            .ld {
+                .btns, .social {
+                    width: 100%;
                 }
             }
         }

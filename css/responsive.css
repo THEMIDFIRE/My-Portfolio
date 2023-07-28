@@ -1,5 +1,15 @@
 @media only screen and (max-width: 768px) {
-  main #landing .container #lt .btnx, main #landing .container #lt .social {
+  main section .container {
+    max-width: 80%;
+    flex-direction: column;
+  }
+  main #landing {
+    text-align: center;
+  }
+  main #landing .ld, main #landing .rt {
+    width: 100%;
+  }
+  main #landing .ld .btns, main #landing .ld .social {
     width: 100%;
   }
 }
@@ -66,7 +76,7 @@
     transition: all 0.3s linear;
   }
   header nav .menu-items {
-    justify-content: center !important;
+    justify-content: center;
   }
   header nav .menu-items li {
     margin: 10px;
@@ -83,14 +93,7 @@
   .wider:hover nav {
     background: rgba(110, 80, 140, 0.7);
   }
-  main #landing .container {
-    min-width: 100%;
-    flex-direction: column;
-  }
-  main #landing .container #lt, main #landing .container #rd {
-    width: auto !important;
-  }
-  main #landing .container #lt .btns, main #landing .container #lt .social {
-    width: 100% !important;
+  main #landing .ld .btns, main #landing .ld .social {
+    width: 100%;
   }
 }/*# sourceMappingURL=responsive.css.map */

@@ -4,16 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/responsive.css">
+  <meta name="description" content="My name is Mohamed Magdy, I'm a front-end web developer and this is my portfolio that I made from scratch with pure CSS3 even though I know BootStrap but I wanted to do that so I can have more fun doing what I love the best">
+  <!-- Tab color for Mobile devices -->
+  <meta name="theme-color" content="#12130F">
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- responsive stylesheet -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Animations -->
   <link rel="stylesheet" href="css/animation.css">
+  <!-- Fontawesome icon pack -->
   <script src="https://kit.fontawesome.com/c1bb2678a4.js" crossorigin="anonymous"></script>
   <title>Mohamed Magdy</title>
 </head>
 <body>
   <header>
     <div class="brandName">
-      <a href="#landing" class="name">Mohamed</a>
+      <a href="#" class="name">Mohamed</a>
     </div>
     <input type="checkbox" id="menu">
     <label for="menu">
@@ -33,11 +40,11 @@
   <main>
     <section id="landing">
       <div class="container">
-          <div class="lt">
+          <div class="ld">
             <h3>Hello,</h3>
-            <h1 class="name">I&#39m <span>Mohamed Magdy,</span></h1>
-            <h2 class="feild">Front-end web developer</h2>
-            <p class="phrase">Freelancer based in Egypt</p>
+            <h1>I&#39m <span>Mohamed Magdy,</span></h1>
+            <h2>Front-end web developer</h2>
+            <p>Freelancer based in Egypt</p>
             <div class="btns">
               <a href="#contact" class="contact btn">Get in touch</a>
               <a href="#projects" class="projects btn">Projects</a>
@@ -50,38 +57,47 @@
               <a href="https://instagram.com/themidfire.dev" title="Instagram" class="icon"><i class="brand fab fa-instagram"></i></a>
             </div>
           </div>
-          <div class="rd">
+          <div class="rt">
             <img src="imgs/me.png" alt="A picture of me just smiling" id="me">
           </div>
         </div>
     </section>
     <section id="about">
       <div class="container">
-        <h3 class="section-title">About me</h3>
-        <div id="skills">
-          <i class="fa fa-html5"></i>
-          <i class="fa fa-css3"></i>
-          <i class="fab fa-js-square"></i>
-          <i class="fab fa-bootstrap"></i>
+        <h3 class="title">About me</h3>
+        <div class="content">
+          <p class="description">I&#39m a Passionate, Self-taught front-end web developer who loves to code and have fun with the process with the continuous learning and improvemnt in this field</p>
+          <div id="info"></div>
+          <div id="skills">
+            <!-- make the skills as a card when hovering over the icon it opens the card changes the icon color to the default one and explains the skill in brief with a border with the same color that rotates -->
+            <i class="fa fa-html5"></i>
+            <i class="fa fa-css3"></i>
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-bootstrap"></i>
+            <i class="fab fa-sass"></i>
+          </div>
         </div>
       </div>
     </section>
     <section id="services">
       <div class="container">
-        <h3 class="section-title">What I offer</h3>
+        <h3 class="title">What I offer</h3>
       </div>
     </section>
     <section id="projects">
       <div class="container">
-        <h3 class="section-title">Projects</h3>
+        <h3 class="title">Projects</h3>
       </div>
     </section>
     <section id="contact">
       <div class="container">
-        <h3 class="section-title">Contact Me</h3>
+        <h3 class="title">Contact Me</h3>
       </div>
     </section>
   </main>
+  <div id="stt">
+    <a href="#" id="scroll-to-top"><i class="fa fa-arrow-up"></i></a>
+  </div>
   <footer>
     <p>Made with ♥</p>
   </footer>
