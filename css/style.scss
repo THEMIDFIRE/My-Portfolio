@@ -158,7 +158,6 @@ main {
             background-color: rgba($color: $secondary, $alpha: .1);
         }
         .container {
-            max-width: 80%;
             min-height: 100dvh;
             display: flex;
             justify-content: space-evenly;
@@ -181,6 +180,10 @@ main {
         background: radial-gradient(circle farthest-side at 124% 50%, #004e92 0, #004e92 4%, #000428 77%, #000428 100%);
         background-position: 50% 50%;
         background-size: auto auto;
+        .container {
+            max-width: 80%;
+
+        }
         .ld {
             width: 50%;
             .btns, .social {
@@ -294,8 +297,10 @@ main {
     // Start About me styling
     #about {
         text-align: center;
+        .container {
+            max-width: 90%;
+        }
         .content {
-            height: 30dvh;
             background: rgba($color: $secondary, $alpha: .15);
             border: {
                 width: 1px;
@@ -303,13 +308,24 @@ main {
                 color: #ffffff20;
                 radius: 12px;
             }
-            backdrop-filter: blur(3px);
+            backdrop-filter: blur(1.5px);
             display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
             align-items: center;
-            p {
-                width: 80%;
+            .description {
+                width: 50%;
+            }
+            #info {
+                width: 50%;
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                flex: 1 1 50%;
+                div {
+                    width: 50%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
             }
         }
     }

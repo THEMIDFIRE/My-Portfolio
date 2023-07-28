@@ -148,7 +148,6 @@ main section:nth-child(even) {
   background-color: rgba(112, 134, 155, 0.1);
 }
 main section .container {
-  max-width: 80%;
   min-height: 100dvh;
   display: flex;
   justify-content: space-evenly;
@@ -169,6 +168,9 @@ main #landing {
   background: radial-gradient(circle farthest-side at 124% 50%, #004e92 0, #004e92 4%, #000428 77%, #000428 100%);
   background-position: 50% 50%;
   background-size: auto auto;
+}
+main #landing .container {
+  max-width: 80%;
 }
 main #landing .ld {
   width: 50%;
@@ -277,22 +279,35 @@ main #landing .rt img {
 main #about {
   text-align: center;
 }
+main #about .container {
+  max-width: 90%;
+}
 main #about .content {
-  height: 30dvh;
   background: rgba(112, 134, 155, 0.15);
   border-width: 1px;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.1254901961);
   border-radius: 12px;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(1.5px);
+          backdrop-filter: blur(1.5px);
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
 }
-main #about .content p {
-  width: 80%;
+main #about .content .description {
+  width: 50%;
+}
+main #about .content #info {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex: 1 1 50%;
+}
+main #about .content #info div {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #stt .shown {

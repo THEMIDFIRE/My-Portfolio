@@ -9,6 +9,9 @@
   main #landing .ld, main #landing .rt {
     width: 100%;
   }
+  main #landing .ld {
+    order: 2;
+  }
   main #landing .ld .btns, main #landing .ld .social {
     width: 100%;
   }
