@@ -60,4 +60,9 @@
         top: 100%;
     }
 }
+@keyframes border {
+    100% {
+        transform: rotate(1turn);
+    }
+}
 //Mobile navbar animation end

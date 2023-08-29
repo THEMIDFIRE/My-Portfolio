@@ -111,4 +111,14 @@
     display: flex;
     top: 100%;
   }
+}
+@-webkit-keyframes border {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes border {
+  100% {
+    transform: rotate(1turn);
+  }
 }/*# sourceMappingURL=animation.css.map */
