@@ -20,6 +20,21 @@
                 }
             }
         }
+        #about {
+            .container {
+                .lt, .rd {
+                    width: 90%;
+                    margin: auto;
+                }
+                .rd {
+                    #info {
+                        div {
+                            width: initial;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 // Mobile devices
