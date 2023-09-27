@@ -22,6 +22,11 @@
         }
         #about {
             .container {
+                .title {
+                    top: 62%;
+                    right: auto;
+                    left: 50%;
+                }
                 .lt, .rd {
                     width: 90%;
                     margin: auto;
@@ -31,6 +36,18 @@
                         div {
                             width: initial;
                         }
+                    }
+                }
+            }
+        }
+        #services {
+            .container {
+                .title {
+                    top: 50%;
+                }
+                #cards {
+                    .card {
+                        width: 49%;
                     }
                 }
             }
@@ -122,6 +139,15 @@
             .ld {
                 .btns, .social {
                     width: 100%;
+                }
+            }
+        }
+        #services {
+            .container {
+                #cards {
+                    .card {
+                        width: 100%;
+                    }
                 }
             }
         }

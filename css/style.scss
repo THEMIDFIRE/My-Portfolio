@@ -158,7 +158,7 @@ main {
         margin-bottom: 50px;
         position: relative;
         &:nth-child(even) {
-            background-color: rgba($color: $secondary, $alpha: .1);
+            background-color: rgba(255, 255, 255, 0.03);
         }
         .container {
             max-width: 80%;
@@ -168,13 +168,49 @@ main {
             flex-wrap: wrap;
             margin: auto;
             .title {
+                font-size: 1.3rem;
                 position: absolute;
-                // top: 50%;
-                // left: 50%;
                 transform: translate(-50%, -50%) scale(3.5) rotate(-20deg);
                 color: transparent;
-                -webkit-text-stroke: .22px $txt;
-                z-index: -1;
+                -webkit-text-stroke: .22px $accent;
+                z-index: -9;
+            }
+        }
+        .social {
+            .icon {
+                transition: .4s ease-in-out;
+                .brand {
+                    color: $brand;
+                    transition: all .4s ease-in-out;
+                }
+            }
+            .fa-github {
+                &:hover {
+                    color: $githover;
+                }
+            }
+            .fa-linkedin {
+                &:hover {
+                    color: $inhover;
+                }
+            }
+            .fa-twitter {
+                &:hover {
+                    color: $twhover;
+                }
+            }
+            .fa-facebook {
+                &:hover {
+                    color: $fbhover;
+                }
+            }
+            .fa-instagram {
+                padding: 1px 2px;
+                border-radius: 6px;
+                &:hover {
+                    color: white;
+                    background: $ighover;
+                }
             }
         }
     }
@@ -236,46 +272,9 @@ main {
             .social {
                 .icon {
                     transform: rotate(-25deg) skew(25deg);
-                    transition: .4s ease-in-out;
                     &:hover {
                         transform: rotate(0) skew(0);
-                    }
-                    .brand {
-                        transition: all .4s ease-in-out;
-                    }
-                }
-                .fa-github {
-                    color: $brand;
-                    &:hover {
-                        color: $githover;
-                    }
-                }
-                .fa-linkedin {
-                    color: $brand;
-                    &:hover {
-                        color: $inhover;
-                    }
-                }
-                .fa-twitter {
-                    color: $brand;
-                    &:hover {
-                        color: $twhover;
-                    }
-                }
-                .fa-facebook {
-                    color: $brand;
-                    &:hover {
-                        color: $fbhover;
-                    }
-                }
-                .fa-instagram {
-                    color: $brand;
-                    padding: 1px 2px;
-                    border-radius: 6px;
-                    &:hover {
-                        color: white;
-                        background: $ighover;
-                    }
+                    }    
                 }
             }
         }
@@ -299,8 +298,8 @@ main {
         .container {
             min-height: 80dvh;
             padding: 3%;
-            background: rgba($color: $secondary, $alpha: .18);
-            backdrop-filter: blur(2px);
+            background: rgba($color: $secondary, $alpha: .1);
+            backdrop-filter: blur(5px);
             border: {
                 width: 1px;
                 style: solid;
@@ -365,6 +364,9 @@ main {
                         h4 {
                             margin-right: 10px;
                         }
+                        p {
+                            color: $secondary;
+                        }
                     }
                 }
                 #skills {
@@ -419,6 +421,99 @@ main {
         }
     }
     // End About me styling
+    // Start Services styling
+    #services {
+        $accent: #453257;
+        $txt: #F0F2FF;
+        min-height: 50dvh;
+        .container {
+            .title {
+                left: 50%;
+            }
+            #cards {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                .card {
+                    width: 32%;
+                    text-align: center;
+                    border: 1px solid;
+                    border-radius: 8px;
+                    padding: 15px;
+                    transition: .3s linear;
+                    .card-title {
+                        margin-block: 10px;
+                    }
+                    .card-description {
+                        font-size: 1.1rem;
+                    }
+                    &:hover {
+                        background-color: $accent;
+                        color: $txt;
+                        border: 1px solid $accent;
+                        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+                    }
+                }
+            }
+        }
+    }
+    // End Services styling
+    // Start Contact styling
+    #contact {
+        .container {
+            justify-content: space-evenly;
+            div, p {
+                display: flex;
+                justify-content: space-evenly;
+            }
+            div {
+                width: 45%;
+            }
+            p {
+                width: 10%;
+            }
+            #email {
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 250px;
+                    border-radius: 10px;
+                    padding: 15px;
+                    transition: all .3s ease-out;
+                    input, textarea {
+                        color: $txt;
+                        font-family: inherit;
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                    }
+                    input {
+                        margin-block: 5px;
+                        &:is(:last-of-type) {
+                            margin-bottom: 0;
+                            width: 20%;
+                        }
+                    }
+                    textarea {
+                        height: 100%;
+                        resize: none;
+                        overflow: hidden;
+                    }
+                    &:hover {
+                        background-color: rgba($color: $secondary, $alpha: .19);
+                        box-shadow: 6px 6px 3px 0px rgba(0,0,0,0.75);
+                        input, textarea {
+                            // box-shadow: 6px 6px 3px 0px rgba(0,0,0,0.75);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // End Contact styling
 }
 // End Main page styling
 // Start Scroll To Top button styling

@@ -15,12 +15,23 @@
   main #landing .ld .btns, main #landing .ld .social {
     width: 100%;
   }
+  main #about .container .title {
+    top: 62%;
+    right: auto;
+    left: 50%;
+  }
   main #about .container .lt, main #about .container .rd {
     width: 90%;
     margin: auto;
   }
   main #about .container .rd #info div {
     width: initial;
+  }
+  main #services .container .title {
+    top: 50%;
+  }
+  main #services .container #cards .card {
+    width: 49%;
   }
 }
 @media only screen and (max-width: 620px) {
@@ -104,6 +115,9 @@
     background: rgba(110, 80, 140, 0.7);
   }
   main #landing .ld .btns, main #landing .ld .social {
+    width: 100%;
+  }
+  main #services .container #cards .card {
     width: 100%;
   }
 }/*# sourceMappingURL=responsive.css.map */

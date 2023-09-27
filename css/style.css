@@ -148,7 +148,7 @@ main section {
   position: relative;
 }
 main section:nth-child(even) {
-  background-color: rgba(112, 134, 155, 0.1);
+  background-color: rgba(255, 255, 255, 0.03);
 }
 main section .container {
   max-width: 80%;
@@ -159,11 +159,39 @@ main section .container {
   margin: auto;
 }
 main section .container .title {
+  font-size: 1.3rem;
   position: absolute;
   transform: translate(-50%, -50%) scale(3.5) rotate(-20deg);
   color: transparent;
-  -webkit-text-stroke: 0.22px #4D6CFA;
-  z-index: -1;
+  -webkit-text-stroke: 0.22px #6E508C;
+  z-index: -9;
+}
+main section .social .icon {
+  transition: 0.4s ease-in-out;
+}
+main section .social .icon .brand {
+  color: #999;
+  transition: all 0.4s ease-in-out;
+}
+main section .social .fa-github:hover {
+  color: #fafafa;
+}
+main section .social .fa-linkedin:hover {
+  color: #0a66c2;
+}
+main section .social .fa-twitter:hover {
+  color: #1da1f2;
+}
+main section .social .fa-facebook:hover {
+  color: #1778f2;
+}
+main section .social .fa-instagram {
+  padding: 1px 2px;
+  border-radius: 6px;
+}
+main section .social .fa-instagram:hover {
+  color: white;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 main #landing {
   background: radial-gradient(circle farthest-side at 124% 50%, #004e92 0, #004e92 4%, #000428 77%, #000428 100%);
@@ -221,46 +249,9 @@ main #landing .ld .btns .contact:hover::after {
 }
 main #landing .ld .social .icon {
   transform: rotate(-25deg) skew(25deg);
-  transition: 0.4s ease-in-out;
 }
 main #landing .ld .social .icon:hover {
   transform: rotate(0) skew(0);
-}
-main #landing .ld .social .icon .brand {
-  transition: all 0.4s ease-in-out;
-}
-main #landing .ld .social .fa-github {
-  color: #999;
-}
-main #landing .ld .social .fa-github:hover {
-  color: #fafafa;
-}
-main #landing .ld .social .fa-linkedin {
-  color: #999;
-}
-main #landing .ld .social .fa-linkedin:hover {
-  color: #0a66c2;
-}
-main #landing .ld .social .fa-twitter {
-  color: #999;
-}
-main #landing .ld .social .fa-twitter:hover {
-  color: #1da1f2;
-}
-main #landing .ld .social .fa-facebook {
-  color: #999;
-}
-main #landing .ld .social .fa-facebook:hover {
-  color: #1778f2;
-}
-main #landing .ld .social .fa-instagram {
-  color: #999;
-  padding: 1px 2px;
-  border-radius: 6px;
-}
-main #landing .ld .social .fa-instagram:hover {
-  color: white;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 main #landing .rt {
   width: 50%;
@@ -280,9 +271,9 @@ main #about {
 main #about .container {
   min-height: 80dvh;
   padding: 3%;
-  background: rgba(112, 134, 155, 0.18);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  background: rgba(112, 134, 155, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   border-width: 1px;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.1254901961);
@@ -346,6 +337,9 @@ main #about .container .rd #info div {
 main #about .container .rd #info div h4 {
   margin-right: 10px;
 }
+main #about .container .rd #info div p {
+  color: #70869B;
+}
 main #about .container .rd #skills {
   width: 100%;
   display: flex;
@@ -384,7 +378,84 @@ main #about .container .rd #helper .fa-info {
   border: 2px solid;
   border-radius: 50%;
 }
-
+main #services {
+  min-height: 50dvh;
+}
+main #services .container .title {
+  left: 50%;
+}
+main #services .container #cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+main #services .container #cards .card {
+  width: 32%;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 15px;
+  transition: 0.3s linear;
+}
+main #services .container #cards .card .card-title {
+  margin-block: 10px;
+}
+main #services .container #cards .card .card-description {
+  font-size: 1.1rem;
+}
+main #services .container #cards .card:hover {
+  background-color: #453257;
+  color: #F0F2FF;
+  border: 1px solid #453257;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+main #contact .container {
+  justify-content: space-evenly;
+}
+main #contact .container div, main #contact .container p {
+  display: flex;
+  justify-content: space-evenly;
+}
+main #contact .container div {
+  width: 45%;
+}
+main #contact .container p {
+  width: 10%;
+}
+main #contact .container #email form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  padding: 15px;
+  transition: all 0.3s ease-out;
+}
+main #contact .container #email form input, main #contact .container #email form textarea {
+  color: #4D6CFA;
+  font-family: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+main #contact .container #email form input {
+  margin-block: 5px;
+}
+main #contact .container #email form input:is(:last-of-type) {
+  margin-bottom: 0;
+  width: 20%;
+}
+main #contact .container #email form textarea {
+  height: 100%;
+  resize: none;
+  overflow: hidden;
+}
+main #contact .container #email form:hover {
+  background-color: rgba(112, 134, 155, 0.19);
+  box-shadow: 6px 6px 3px 0px rgba(0, 0, 0, 0.75);
+}
 #stt .shown {
   display: block;
 }
