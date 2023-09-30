@@ -52,6 +52,22 @@
                 }
             }
         }
+        #contact {
+            .container {
+                max-width: 80%;
+                justify-content: space-evenly;
+                .social, form {
+                    width: 100%;
+                    height: initial;
+                }
+                .social {
+                    flex-direction: row;
+                }
+                form {
+                    height: 40dvh;
+                }
+            }
+        }
     }
 }
 // Mobile devices

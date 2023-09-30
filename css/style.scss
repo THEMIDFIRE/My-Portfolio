@@ -184,24 +184,34 @@ main {
                     transition: all .4s ease-in-out;
                 }
             }
+            .fa-envelope {
+                &:hover {
+                    color: $mail;
+                }
+            }
+            .fa-phone {
+                &:hover {
+                    color: $phone;
+                }
+            }
             .fa-github {
                 &:hover {
-                    color: $githover;
+                    color: $git;
                 }
             }
             .fa-linkedin {
                 &:hover {
-                    color: $inhover;
+                    color: $in;
                 }
             }
             .fa-twitter {
                 &:hover {
-                    color: $twhover;
+                    color: $tw;
                 }
             }
             .fa-facebook {
                 &:hover {
-                    color: $fbhover;
+                    color: $fb;
                 }
             }
             .fa-instagram {
@@ -209,7 +219,7 @@ main {
                 border-radius: 6px;
                 &:hover {
                     color: white;
-                    background: $ighover;
+                    background: $ig;
                 }
             }
         }
@@ -348,6 +358,7 @@ main {
                 }
             }
             .rd {
+                $txt: #fff;
                 flex-wrap: wrap;
                 .description {
                     margin: revert;
@@ -365,7 +376,7 @@ main {
                             margin-right: 10px;
                         }
                         p {
-                            color: $secondary;
+                            color: $txt;
                         }
                     }
                 }
@@ -374,8 +385,9 @@ main {
                     display: flex;
                     justify-content: space-evenly;
                     margin-block: 26px;
-                    .fa-html5, .fa-css3, .fa-js, .fa-bootstrap, .fa-sass {
-                        transition: all .3s linear;
+                    .icon {
+                        position: relative;
+                        transition: all .2s linear;
                     }
                     .fa-html5 {
                         &:hover{
@@ -454,6 +466,7 @@ main {
                         color: $txt;
                         border: 1px solid $accent;
                         box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+                        transform: translate(-5px, -5px);
                     }
                 }
             }
@@ -463,51 +476,40 @@ main {
     // Start Contact styling
     #contact {
         .container {
-            justify-content: space-evenly;
-            div, p {
+            max-width: 60%;
+            min-height: 80dvh;
+            justify-content: space-around;
+            align-items: center;
+            .social, form {
                 display: flex;
+                height: 80dvh;
+                flex-direction: column;
                 justify-content: space-evenly;
+                border: 1px solid $secondary;
+                border-radius: 10px;
+                padding: 35px;
             }
-            div {
-                width: 45%;
-            }
-            p {
-                width: 10%;
-            }
-            #email {
-                form {
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
-                    height: 250px;
-                    border-radius: 10px;
-                    padding: 15px;
-                    transition: all .3s ease-out;
-                    input, textarea {
-                        color: $txt;
-                        font-family: inherit;
-                        background: transparent;
-                        border: none;
+            form {
+                width: 75%;
+                input, textarea {
+                    height: 35px;
+                    color: inherit;
+                    font-family: inherit;
+                    background: transparent;
+                    border: none;
+                    border-bottom: 2px solid;
+                    border-radius: 8px;
+                    resize: none;
+                    transition: .3s linear;
+                    &:focus {
                         outline: none;
+                        box-shadow: 0 5px 6px 2px #000;
+                        transform: translateY(-5px);
                     }
-                    input {
-                        margin-block: 5px;
-                        &:is(:last-of-type) {
-                            margin-bottom: 0;
-                            width: 20%;
-                        }
-                    }
-                    textarea {
-                        height: 100%;
-                        resize: none;
-                        overflow: hidden;
-                    }
-                    &:hover {
-                        background-color: rgba($color: $secondary, $alpha: .19);
-                        box-shadow: 6px 6px 3px 0px rgba(0,0,0,0.75);
-                        input, textarea {
-                            // box-shadow: 6px 6px 3px 0px rgba(0,0,0,0.75);
-                        }
+                }
+                textarea {
+                    &:focus {
+                        height: 50px;
                     }
                 }
             }

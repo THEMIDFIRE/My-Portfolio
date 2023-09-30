@@ -173,6 +173,12 @@ main section .social .icon .brand {
   color: #999;
   transition: all 0.4s ease-in-out;
 }
+main section .social .fa-envelope:hover {
+  color: #168de2;
+}
+main section .social .fa-phone:hover {
+  color: #0f9d58;
+}
 main section .social .fa-github:hover {
   color: #fafafa;
 }
@@ -338,7 +344,7 @@ main #about .container .rd #info div h4 {
   margin-right: 10px;
 }
 main #about .container .rd #info div p {
-  color: #70869B;
+  color: #fff;
 }
 main #about .container .rd #skills {
   width: 100%;
@@ -346,8 +352,9 @@ main #about .container .rd #skills {
   justify-content: space-evenly;
   margin-block: 26px;
 }
-main #about .container .rd #skills .fa-html5, main #about .container .rd #skills .fa-css3, main #about .container .rd #skills .fa-js, main #about .container .rd #skills .fa-bootstrap, main #about .container .rd #skills .fa-sass {
-  transition: all 0.3s linear;
+main #about .container .rd #skills .icon {
+  position: relative;
+  transition: all 0.2s linear;
 }
 main #about .container .rd #skills .fa-html5:hover {
   color: #e34f26;
@@ -410,52 +417,46 @@ main #services .container #cards .card:hover {
   color: #F0F2FF;
   border: 1px solid #453257;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  transform: translate(-5px, -5px);
 }
 main #contact .container {
-  justify-content: space-evenly;
+  max-width: 60%;
+  min-height: 80dvh;
+  justify-content: space-around;
+  align-items: center;
 }
-main #contact .container div, main #contact .container p {
+main #contact .container .social, main #contact .container form {
   display: flex;
-  justify-content: space-evenly;
-}
-main #contact .container div {
-  width: 45%;
-}
-main #contact .container p {
-  width: 10%;
-}
-main #contact .container #email form {
-  display: flex;
+  height: 80dvh;
   flex-direction: column;
-  width: 100%;
-  height: 250px;
+  justify-content: space-evenly;
+  border: 1px solid #70869B;
   border-radius: 10px;
-  padding: 15px;
-  transition: all 0.3s ease-out;
+  padding: 35px;
 }
-main #contact .container #email form input, main #contact .container #email form textarea {
-  color: #4D6CFA;
+main #contact .container form {
+  width: 75%;
+}
+main #contact .container form input, main #contact .container form textarea {
+  height: 35px;
+  color: inherit;
   font-family: inherit;
   background: transparent;
   border: none;
-  outline: none;
-}
-main #contact .container #email form input {
-  margin-block: 5px;
-}
-main #contact .container #email form input:is(:last-of-type) {
-  margin-bottom: 0;
-  width: 20%;
-}
-main #contact .container #email form textarea {
-  height: 100%;
+  border-bottom: 2px solid;
+  border-radius: 8px;
   resize: none;
-  overflow: hidden;
+  transition: 0.3s linear;
 }
-main #contact .container #email form:hover {
-  background-color: rgba(112, 134, 155, 0.19);
-  box-shadow: 6px 6px 3px 0px rgba(0, 0, 0, 0.75);
+main #contact .container form input:focus, main #contact .container form textarea:focus {
+  outline: none;
+  box-shadow: 0 5px 6px 2px #000;
+  transform: translateY(-5px);
 }
+main #contact .container form textarea:focus {
+  height: 50px;
+}
+
 #stt .shown {
   display: block;
 }
