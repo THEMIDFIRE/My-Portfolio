@@ -473,6 +473,20 @@ main {
         }
     }
     // End Services styling
+    // Start Projects styling
+    #projects {
+        .container {
+            #projectInfo {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                div {
+                    width: 300px;
+                }
+            }
+        }
+    }
+    // End Projects styling
     // Start Contact styling
     #contact {
         .container {

@@ -419,6 +419,14 @@ main #services .container #cards .card:hover {
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   transform: translate(-5px, -5px);
 }
+main #projects .container #projectInfo {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+main #projects .container #projectInfo div {
+  width: 300px;
+}
 main #contact .container {
   max-width: 60%;
   min-height: 80dvh;
