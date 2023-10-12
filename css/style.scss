@@ -433,6 +433,13 @@ main {
         }
     }
     // End About me styling
+    // Start Maruqee styling
+    #marquee {
+        p {
+            width: 100%;
+        }
+    }
+    // End Maruqee styling
     // Start Services styling
     #services {
         $accent: #453257;
@@ -476,12 +483,54 @@ main {
     // Start Projects styling
     #projects {
         .container {
+            justify-content: center;
+            #repoInfo {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin-block: 22px;
+            }
             #projectInfo {
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: center;
                 flex-wrap: wrap;
-                div {
+                gap: 16px;
+                .repos {
                     width: 300px;
+                    height: 200px;
+                    font-size: .85em;
+                    border: 1px solid;
+                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 20px;
+                    .description {
+                        font-size: .9em;
+                    }
+                    .more {
+                        width: 100%;
+                        font-size: .6em;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .languages {
+                            width: 80%;
+                            ul {
+                                display: flex;
+                                justify-content: flex-start;
+                                li:not(last-of-type) {
+                                    padding: 4px;
+                                }
+                            }
+                        }
+                        .links {
+                            width: 20%;
+                            display: flex;
+                            justify-content: space-evenly;
+                        }
+                    }
                 }
             }
         }

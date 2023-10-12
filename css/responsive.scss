@@ -52,6 +52,15 @@
                 }
             }
         }
+        #projects {
+            .container {
+                text-align: justify;
+                #repoInfo {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
         #contact {
             .container {
                 max-width: 80%;

@@ -385,6 +385,9 @@ main #about .container .rd #helper .fa-info {
   border: 2px solid;
   border-radius: 50%;
 }
+main #marquee p {
+  width: 100%;
+}
 main #services {
   min-height: 50dvh;
 }
@@ -419,13 +422,57 @@ main #services .container #cards .card:hover {
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   transform: translate(-5px, -5px);
 }
+main #projects .container {
+  justify-content: center;
+}
+main #projects .container #repoInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-block: 22px;
+}
 main #projects .container #projectInfo {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 16px;
 }
-main #projects .container #projectInfo div {
+main #projects .container #projectInfo .repos {
   width: 300px;
+  height: 200px;
+  font-size: 0.85em;
+  border: 1px solid;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+main #projects .container #projectInfo .repos .description {
+  font-size: 0.9em;
+}
+main #projects .container #projectInfo .repos .more {
+  width: 100%;
+  font-size: 0.6em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #projects .container #projectInfo .repos .more .languages {
+  width: 80%;
+}
+main #projects .container #projectInfo .repos .more .languages ul {
+  display: flex;
+  justify-content: flex-start;
+}
+main #projects .container #projectInfo .repos .more .languages ul li:not(last-of-type) {
+  padding: 4px;
+}
+main #projects .container #projectInfo .repos .more .links {
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
 }
 main #contact .container {
   max-width: 60%;
