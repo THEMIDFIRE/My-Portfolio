@@ -1,4 +1,7 @@
 @media only screen and (max-width: 768px) {
+  main {
+    font-size: 1.3em;
+  }
   main section .container {
     max-width: 80%;
     flex-direction: column;
@@ -14,6 +17,9 @@
   }
   main #landing .ld .btns, main #landing .ld .social {
     width: 100%;
+  }
+  main #about {
+    padding-block: 30px;
   }
   main #about .container .title {
     top: 62%;
@@ -52,7 +58,7 @@
     flex-direction: row;
   }
   main #contact .container form {
-    height: 40dvh;
+    height: 60dvh;
   }
 }
 @media only screen and (max-width: 620px) {
