@@ -433,13 +433,6 @@ main {
         }
     }
     // End About me styling
-    // Start Maruqee styling
-    #marquee {
-        p {
-            width: 100%;
-        }
-    }
-    // End Maruqee styling
     // Start Services styling
     #services {
         $accent: #453257;
@@ -529,6 +522,11 @@ main {
                             width: 20%;
                             display: flex;
                             justify-content: space-evenly;
+                            a {
+                                &:visited {
+                                    color: inherit;
+                                }
+                            }
                         }
                     }
                 }

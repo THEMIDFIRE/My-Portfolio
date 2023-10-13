@@ -15,6 +15,7 @@ $(function () {
   });
 });
 
+
 // GitHub API
 const api = 'https://api.github.com/users/themidfire/repos?per_page=100';
 

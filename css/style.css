@@ -385,9 +385,6 @@ main #about .container .rd #helper .fa-info {
   border: 2px solid;
   border-radius: 50%;
 }
-main #marquee p {
-  width: 100%;
-}
 main #services {
   min-height: 50dvh;
 }
@@ -473,6 +470,9 @@ main #projects .container #projectInfo .repos .more .links {
   width: 20%;
   display: flex;
   justify-content: space-evenly;
+}
+main #projects .container #projectInfo .repos .more .links a:visited {
+  color: inherit;
 }
 main #contact .container {
   max-width: 60%;
