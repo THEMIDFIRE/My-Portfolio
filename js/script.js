@@ -66,8 +66,8 @@ $.get(api)
           more.append(languagesDiv);
           repoElement.append(more);
 
-          linksDiv.append($(`<a href="${livePreview}" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>`));
-          linksDiv.append($(`<a href="${source}" title="Source Code"><i class="fa-solid fa-code"></i></a>`));
+          linksDiv.append($(`<a href="${livePreview}" title="Live Preview" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>`));
+          linksDiv.append($(`<a href="${source}" title="Source Code" target="_blank"><i class="fa-solid fa-code"></i></a>`));
           more.append(linksDiv);
 
           $('#projectInfo').append(repoElement);
