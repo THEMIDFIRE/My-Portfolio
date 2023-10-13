@@ -141,4 +141,7 @@
   main #services .container #cards .card {
     width: 100%;
   }
+  main #projects .container {
+    padding-block: 30px;
+  }
 }/*# sourceMappingURL=responsive.css.map */
