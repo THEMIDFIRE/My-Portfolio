@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import Welcome from './Welcome';
 
-export default function Header() {
+const Header = () => {
     const navLinks = [
         { id: 1, title: "Projects", url: "/My-Portfolio/projects" },
         { id: 2, title: "Services", url: "/My-Portfolio/services" }
@@ -20,21 +20,25 @@ export default function Header() {
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        if (typeof window !== 'undefined') {
+            window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
     }, []);
 
+    const headerClassName = scrolled ? 'scrolled' : '';
+
     return (
-        <header className={scrolled ? 'scrolled' : ''}>
+        <header className={headerClassName}>
             <Welcome />
             <nav>
                 <ul>
                     {navLinks.map(({ id, title, url }) => (
                         <li key={id}>
-                            <NavLink to={url} activeClassName="active">{title}</NavLink>
+                            <NavLink to={url} activeClassName="active" exact>{title}</NavLink>
                         </li>
                     ))}
                 </ul>
@@ -42,3 +46,5 @@ export default function Header() {
         </header>
     );
 };
+
+export default Header;
