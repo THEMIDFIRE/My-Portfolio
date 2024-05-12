@@ -4,8 +4,8 @@ import Welcome from './Welcome';
 
 const Header = () => {
     const navLinks = [
-        { id: 1, title: "Projects", url: "/projects" },
-        { id: 2, title: "Services", url: "/services" }
+        { id: 1, title: "Projects", url: "/My-Portfolio/projects" },
+        { id: 2, title: "Services", url: "/My-Portfolio/services" }
     ];
 
     const [scrolled, setScrolled] = useState(false);
