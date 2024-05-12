@@ -14,8 +14,8 @@ function App() {
       <About />
       <main>
         <Routes>
-          <Route path="/My-Portfolio/" element={<Projects />} />
-          <Route path="/My-Portfolio/Services" element={<Services />} />
+          <Route path="/My-Portfolio/projects" element={<Projects />} />
+          <Route path="/My-Portfolio/services" element={<Services />} />
         </Routes>
       </main>
       <Mode />
