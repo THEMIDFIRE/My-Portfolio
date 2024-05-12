@@ -1,38 +1,564 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-height: 100svh;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #19346e;
+  max-width: 80%;
+  margin: auto;
+  background-color: #f3f3ef;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+body ul {
+  list-style: none;
+}
+body a {
+  color: #19346e;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: minmax(auto, 10svh);
+  margin-block: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 99 !important;
+}
+header nav {
+  width: 50%;
+  height: 100%;
+}
+header nav ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header nav ul a {
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+header nav ul a:hover {
+  border-width: 1px;
+  border-style: solid;
+}
+header nav ul:hover a:not(:hover) {
+  border: none;
+}
+header nav ul .active {
+  color: #b81d4e;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b81d4e;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+aside {
+  background-color: rgba(83, 100, 138, 0.5);
+  max-width: 30%;
+  height: minmax(auto, 80svh);
+  float: left;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+aside #about {
+  max-width: 80%;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+aside #about *:not(img, svg, #circle, #status) {
+  margin-block: 3px;
+  width: 100%;
+}
+aside #about img {
+  width: 50%;
+  border-radius: 50%;
+}
+aside #about .title {
+  background-color: rgba(83, 100, 138, 0.4);
+  padding: 2px 22px;
+  border-radius: 40px;
+}
+aside #about div {
+  display: flex;
+  align-items: center;
+  margin-block: 2px;
+  padding: 2px;
+}
+aside #about div svg {
+  margin-right: 10px;
+}
+aside #about #status svg {
+  color: rgba(0, 255, 0, 0.603);
+}
+aside #about .info {
+  width: 100%;
+  text-align: justify;
+  flex-direction: column;
+}
+aside #about .skills,
+aside #about .social {
+  width: 100%;
+  font-size: 1.6rem;
+  justify-content: space-evenly;
+}
+aside #about .buttons .btn {
+  padding: 10px;
+  border-radius: 10px;
+  color: #f3f3ef;
+}
+aside #about .buttons .btn:first-child {
+  background-color: #b81d4e;
+}
+aside #about .buttons .btn:last-child {
+  background-color: #223662;
+  border: none;
+}
+aside #about a {
+  color: inherit;
+  text-decoration: none;
+}
+aside #about a:visited {
+  color: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  overflow: hidden;
+  max-width: 68%;
+  height: 89svh;
+  width: 100%;
+  float: right;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #53648a;
+  border-radius: 12px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main #projects,
+main #services {
+  height: 100%;
+  padding-block: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+main #projects p,
+main #services p {
+  text-align: center;
+  margin-block: 10px;
+}
+main #projects .cards,
+main #services .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+main #projects {
+  overflow-y: scroll;
+  scrollbar-color: #7687ad #53648a;
+  scrollbar-width: thin;
+}
+main #projects #error {
+  text-align: center;
+}
+main #projects #error a {
+  text-decoration: underline;
+}
+main #projects .cards .card {
+  width: 310px;
+  height: 155px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px 12px 0 0;
+  transition: all 0.3s ease-in-out;
+}
+main #projects .cards .card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+main #projects .cards .card .project-info {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -15%;
+  transform: translateY(50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(243, 243, 239, 0.4);
+  border-radius: 0 0 12px 12px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  transition: all 0.3s ease-in-out;
+}
+main #projects .cards .card .project-info .links {
+  width: 50%;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+main #projects .cards .card:hover {
+  border-radius: 12px;
+}
+main #projects .cards .card:hover .project-info {
+  border-radius: 12px;
+  overflow: hidden;
+  bottom: 50%;
+  color: #f3f3ef;
+  background-color: rgba(83, 100, 138, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+main #projects .cards .card:hover .project-info a {
+  color: #f3f3ef;
+}
+main #services .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+main #services .cards .card {
+  max-width: 280px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #7687ad;
+  border-radius: 10px;
+}
+main #services .cards .card svg {
+  font-size: 1.9rem;
+  background-color: rgba(83, 100, 138, 0.2);
+  padding: 5px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+main #services .cards .card h3 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+main #services .cards .card p {
+  font-size: 0.95rem;
 }
 
-.App-link {
-  color: #61dafb;
+.ReactModal__Overlay {
+  background-color: rgba(243, 243, 239, 0.4) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+          backdrop-filter: blur(3px) !important;
+}
+.ReactModal__Overlay .ReactModal__Content {
+  background-color: rgba(243, 243, 239, 0.75) !important;
+  box-shadow: 0 0 10px 2px rgba(83, 100, 138, 0.5);
+  text-align: center;
+  max-width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #53648a !important;
+  border-radius: 12px !important;
+}
+.ReactModal__Overlay .ReactModal__Content p {
+  max-width: 70%;
+  margin-block: 20px;
+}
+.ReactModal__Overlay .ReactModal__Content form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.ReactModal__Overlay .ReactModal__Content form label {
+  position: relative;
+  width: 100%;
+}
+.ReactModal__Overlay .ReactModal__Content form label input,
+.ReactModal__Overlay .ReactModal__Content form label textarea {
+  background: transparent;
+  width: 100%;
+  height: 35px;
+  padding: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #223662;
+  border-radius: 8px;
+}
+.ReactModal__Overlay .ReactModal__Content form label input:focus + span, .ReactModal__Overlay .ReactModal__Content form label input:valid + span,
+.ReactModal__Overlay .ReactModal__Content form label textarea:focus + span,
+.ReactModal__Overlay .ReactModal__Content form label textarea:valid + span {
+  font-size: 0.7rem;
+  top: 8px;
+  opacity: 1;
+}
+.ReactModal__Overlay .ReactModal__Content form label input:focus,
+.ReactModal__Overlay .ReactModal__Content form label textarea:focus {
+  outline: none;
+}
+.ReactModal__Overlay .ReactModal__Content form label span {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+.ReactModal__Overlay .ReactModal__Content form [for=message] textarea {
+  height: 80px;
+  resize: none;
+}
+.ReactModal__Overlay .ReactModal__Content form [for=message] span {
+  top: 20%;
+}
+.ReactModal__Overlay .ReactModal__Content .btn {
+  align-self: flex-end;
+  border: none;
+  background: transparent;
+  color: #223662;
+}
+.ReactModal__Overlay .ReactModal__Content .x {
+  margin-right: 10px;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.ReactModal__Overlay .ReactModal__Content [type=submit] {
+  padding: 5px 12px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #223662;
+  border-radius: 8px;
+}
+.ReactModal__Overlay .ReactModal__Content .close {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.darkThemeBtn {
+  position: fixed;
+  bottom: 20%;
+  right: 0;
 }
+.darkThemeBtn * {
+  transition: all 0.3s;
+}
+.darkThemeBtn input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.darkThemeBtn input:checked + label {
+  background: #f3f3ef;
+}
+.darkThemeBtn input:checked + label i.pi-sun {
+  color: #19346e;
+  opacity: 1;
+}
+.darkThemeBtn input:checked + label i.pi-moon {
+  opacity: 0;
+}
+.darkThemeBtn input:checked ~ span {
+  background-color: #16174b;
+}
+.darkThemeBtn label {
+  background: #0f0f0b;
+  height: 40px;
+  width: 45px;
+  border-radius: 50% 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.darkThemeBtn label i {
+  position: absolute;
+  width: 16px;
+  transition: 0.3s;
+  z-index: 99;
+}
+.darkThemeBtn label i.pi-sun {
+  width: 20px;
+  opacity: 0;
+}
+.darkThemeBtn label i.pi-moon {
+  color: #93ade6;
+  opacity: 1;
+}
+
+.dark {
+  background-color: #0f0f0b;
+  color: #93ade6;
+}
+.dark a {
+  color: #93ade6;
+}
+.dark header ul .active {
+  color: #e24677;
+  border-color: #e24677;
+}
+.dark aside {
+  background-color: rgba(118, 135, 173, 0.5);
+}
+.dark aside #about .title {
+  background-color: rgba(118, 135, 173, 0.4);
+}
+.dark aside #about .buttons .btn {
+  color: #0f0f0b;
+}
+.dark aside #about .buttons .btn:first-child {
+  background-color: #e24677;
+}
+.dark aside #about .buttons .btn:last-child {
+  background-color: #9db1dd;
+}
+.dark main {
+  border-color: #7687ad;
+}
+.dark main #projects .cards .card .project-info {
+  background-color: rgba(15, 15, 11, 0.65);
+}
+.dark main #projects .cards .card:hover .project-info {
+  background-color: rgba(118, 135, 173, 0.7);
+}
+.dark .ReactModal__Overlay {
+  background-color: rgba(15, 15, 11, 0.5) !important;
+}
+.dark .ReactModal__Overlay .ReactModal__Content {
+  background-color: rgba(15, 15, 11, 0.75) !important;
+  box-shadow: 0 0 10px 2px rgba(118, 135, 173, 0.5);
+  border-color: #7687ad !important;
+}
+.dark .ReactModal__Overlay .ReactModal__Content form label input,
+.dark .ReactModal__Overlay .ReactModal__Content form label textarea {
+  border-color: #9db1dd;
+}
+.dark .ReactModal__Overlay .ReactModal__Content form label input:focus + span, .dark .ReactModal__Overlay .ReactModal__Content form label input:valid + span,
+.dark .ReactModal__Overlay .ReactModal__Content form label textarea:focus + span,
+.dark .ReactModal__Overlay .ReactModal__Content form label textarea:valid + span {
+  background-color: #0f0f0b;
+}
+.dark .ReactModal__Overlay .ReactModal__Content .btn {
+  color: #9db1dd;
+}
+.dark .ReactModal__Overlay .ReactModal__Content [type=submit] {
+  border-color: #9db1dd;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 90%;
+    overflow: auto;
+  }
+  header {
+    margin-block: initial;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-block: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  header #welcome {
+    width: 100%;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  header nav {
+    width: 100%;
+    margin-block: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  header.scrolled {
+    background-color: rgba(83, 100, 138, 0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 12px;
+  }
+  header.scrolled #welcome {
+    margin-block: 12px;
+  }
+  header.scrolled nav {
+    margin-block: 20px;
+  }
+  header.scrolled .active {
+    background-color: #b81d4e;
+    color: #f3f3ef;
+  }
+  aside {
+    float: none;
+    max-width: 100%;
+    min-height: 80svh;
+    margin-block: 3%;
+    padding-block: 25px;
+  }
+  aside #about {
+    height: 100%;
+  }
+  main {
+    float: none;
+    max-width: 100%;
+    min-height: 100svh;
+    overflow-y: scroll;
+    margin-block: 20px;
+  }
+  main #projects,
+  main #services {
+    height: initial;
+  }
+  .ReactModal__Overlay .ReactModal__Content {
+    max-width: 100%;
+    height: 65vh;
+  }
+  .ReactModal__Overlay .ReactModal__Content p {
+    max-width: 90%;
+  }
+  .ReactModal__Overlay .ReactModal__Content form {
+    width: 90%;
+  }
+}/*# sourceMappingURL=App.css.map */
