@@ -15,7 +15,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/projects" element={<Projects />} />
-          <Route path="/Services" element={<Services />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
       </main>
       <Mode />
