@@ -503,6 +503,7 @@ main {
                 label {
                     input,
                     textarea {
+                        color: $text-dark;
                         border-color: $primary-dark;
                         &:focus + span,
                         &:valid + span {
