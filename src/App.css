@@ -432,6 +432,9 @@ main #services .cards .card p {
   color: #e24677;
   border-color: #e24677;
 }
+.dark header.scrolled .active {
+  color: #f3f3ef;
+}
 .dark aside {
   background-color: rgba(118, 135, 173, 0.5);
 }

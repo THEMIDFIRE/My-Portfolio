@@ -456,6 +456,11 @@ main {
                 border-color: $secondary-dark;
             }
         }
+        &.scrolled {
+            .active {
+                color: $background-light;
+            }
+        }
     }
     aside {
         background-color: rgba($color: $accent-dark, $alpha: 0.5);
