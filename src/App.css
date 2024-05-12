@@ -311,7 +311,7 @@ main #services .cards .card p {
   background: transparent;
   width: 100%;
   height: 35px;
-  padding: 10px;
+  padding: 12px;
   border-width: 2px;
   border-style: solid;
   border-color: #223662;
@@ -468,11 +468,6 @@ main #services .cards .card p {
 .dark .ReactModal__Overlay .ReactModal__Content form label textarea {
   color: #93ade6;
   border-color: #9db1dd;
-}
-.dark .ReactModal__Overlay .ReactModal__Content form label input:focus + span, .dark .ReactModal__Overlay .ReactModal__Content form label input:valid + span,
-.dark .ReactModal__Overlay .ReactModal__Content form label textarea:focus + span,
-.dark .ReactModal__Overlay .ReactModal__Content form label textarea:valid + span {
-  background-color: #0f0f0b;
 }
 .dark .ReactModal__Overlay .ReactModal__Content .btn {
   color: #9db1dd;
