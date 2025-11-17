@@ -10,7 +10,7 @@ import { useRouterState } from '@tanstack/react-router'
 
 export default function About() {
     const routerState = useRouterState()
-    const showReposNum = routerState.location.pathname !== '/'
+    const showReposNum = !routerState.location.pathname.endsWith('/') && !routerState.location.pathname.endsWith('/My-Portfolio')
 
 
     const { data } = useQuery({
