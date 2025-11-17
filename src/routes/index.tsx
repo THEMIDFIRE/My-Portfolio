@@ -4,7 +4,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
 
-export const Route = createFileRoute('/My-Portfolio/')({
+export const Route = createFileRoute('/')({
   component: RouteComponent,
 })
 
