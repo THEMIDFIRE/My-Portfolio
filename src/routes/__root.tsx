@@ -10,7 +10,7 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   const routerState = useRouterState()
-  const showNavbar = routerState.location.pathname !== '/'
+  const showNavbar = routerState.location.pathname !== '/My-Portfolio/'
   return (
     <React.Fragment>
       <ModeToggle />

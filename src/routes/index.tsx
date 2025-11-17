@@ -32,13 +32,13 @@ function RouteComponent() {
   return (
     <div className='container h-full flex flex-col justify-center items-center gap-4 md:order-2 my-8 md:mt-0'>
       <h1 className="md:text-4xl text-3xl font-bold text-center max-w-[23ch]">
-        {name ? `Welcome to my Portfolio, ${name}` : 'Welcome to my Portfolio'}
+        {name ? `Welcome to my Portfolio, ${name}` : `Welcome to my Portfolio`}
       </h1>
       <p className='md:text-xl text-lg text-center'>
         Here you can find my
         <Tooltip>
           <TooltipTrigger asChild>
-            <Link to="/Projects" className='underline underline-offset-4 ml-1.5 motion-safe:animate-pulse'>Projects</Link>
+            <Link to="/Projects" className="underline underline-offset-4 ml-1.5 motion-safe:animate-pulse">Projects</Link>
           </TooltipTrigger>
           <TooltipContent side='bottom'>
             My latest projects showcasing my skills
@@ -46,7 +46,7 @@ function RouteComponent() {
         </Tooltip> and
         <Tooltip>
           <TooltipTrigger asChild>
-            <Link to="/Services" className='underline underline-offset-4 ml-1.5 motion-safe:animate-pulse'>Services</Link>
+            <Link to="/Services" className="underline underline-offset-4 ml-1.5 motion-safe:animate-pulse">Services</Link>
           </TooltipTrigger>
           <TooltipContent side='bottom'>
             My services as a freelancer
