@@ -6,7 +6,7 @@ import { tanstackRouter } from '@tanstack/router-plugin/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/My-Portfolio' : '/',
+  base: '/My-Portfolio/',
   plugins: [
     tanstackRouter({
       target: 'react',
@@ -22,6 +22,7 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
-  },
+    emptyOutDir: true,
+    sourcemap: true
+  }
 })
