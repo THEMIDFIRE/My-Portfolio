@@ -110,7 +110,7 @@ export default function About() {
                 </div>
                 <p className="text-center text-slate-500 dark:text-slate-400">Available for freelance work</p>
                 {showReposNum && <p className="text-center text-slate-500 dark:text-slate-400">Total repos: {data?.public_repos}</p>}
-                <Button variant="default" className='w-4/5' onClick={() => window.open("/src/assets/Mohamed Magdy - Front end - CV.pdf", "_blank")}>
+                <Button variant="default" className='w-4/5' onClick={() => window.open("/My-Portfolio/Mohamed Magdy - Front end - CV.pdf", "_blank")}>
                     Download CV
                 </Button>
             </Card>
