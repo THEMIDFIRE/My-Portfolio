@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query'
 import { createFileRoute } from '@tanstack/react-router'
 import CircleLoader from 'react-spinners/CircleLoader'
 
-export const Route = createFileRoute('/Projects')({
+export const Route = createFileRoute('/My-Portfolio/Projects')({
     component: RouteComponent,
 })
 
@@ -21,7 +21,7 @@ function RouteComponent() {
     return (
         <>
             {isLoading ? <div className='w-full grow md:max-h-[calc(100vh-7rem)] xl:max-h-dvh rounded-2xl md:overflow-y-auto mb-6 md:mb-0 lg:py-7 order-2 self-center'>
-                <CircleLoader color={`${theme === 'dark' ? '#e5e5e5' : '#90a1b9'}`} loading={true} size={110} className='mx-auto'/>
+                <CircleLoader color={`${theme === `dark` ? `#e5e5e5` : `#90a1b9`}`} loading={true} size={110} className="mx-auto"/>
             </div> : 
             <section className='w-full grow h-fit sm:max-h-[calc(100vh-7rem)] md:max-h-screen xl:max-h-[calc(100vh-1rem)] rounded-2xl overflow-y-auto mb-6 md:mb-0 order-2'>
                 <div className="container grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 overflow-y-auto">

@@ -1,7 +1,7 @@
 import ServiceCard from '@/components/ServiceCard'
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/Services')({
+export const Route = createFileRoute('/My-Portfolio/Services')({
   component: RouteComponent,
 })
 
@@ -34,7 +34,7 @@ function RouteComponent() {
   ]
   return (
     // <section className='w-full h-fit grow md:max-h-[calc(100vh-7rem)] xl:max-h-dvh rounded-2xl md:overflow-y-auto mb-6 md:mb-0 lg:py-7 order-2'>
-      <section className='w-full grow sm:max-h-[calc(100vh-7rem)] md:max-h-dvh xl:max-h-dvh rounded-2xl overflow-y-auto mb-6 md:mb-0 lg:py-5 order-2'>
+    <section className='w-full grow sm:max-h-[calc(100vh-7rem)] md:max-h-dvh xl:max-h-dvh rounded-2xl overflow-y-auto mb-6 md:mb-0 lg:py-5 order-2'>
       <div className="container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6">
         {services.map((service, index) => (
           <ServiceCard key={index} title={service.title} description={service.description} />

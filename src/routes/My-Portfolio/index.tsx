@@ -4,7 +4,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
 
-export const Route = createFileRoute('/')({
+export const Route = createFileRoute('/My-Portfolio/')({
   component: RouteComponent,
 })
 
@@ -38,7 +38,7 @@ function RouteComponent() {
         Here you can find my
         <Tooltip>
           <TooltipTrigger asChild>
-            <Link to="/Projects" className="underline underline-offset-4 ml-1.5 motion-safe:animate-pulse">Projects</Link>
+            <Link to="/My-Portfolio/Projects" className="underline underline-offset-4 ml-1.5 motion-safe:animate-pulse">Projects</Link>
           </TooltipTrigger>
           <TooltipContent side='bottom'>
             My latest projects showcasing my skills
@@ -46,7 +46,7 @@ function RouteComponent() {
         </Tooltip> and
         <Tooltip>
           <TooltipTrigger asChild>
-            <Link to="/Services" className="underline underline-offset-4 ml-1.5 motion-safe:animate-pulse">Services</Link>
+            <Link to="/My-Portfolio/Services" className="underline underline-offset-4 ml-1.5 motion-safe:animate-pulse">Services</Link>
           </TooltipTrigger>
           <TooltipContent side='bottom'>
             My services as a freelancer
