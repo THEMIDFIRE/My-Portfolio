@@ -1,15 +1,16 @@
 {
-  "name": "My-Portfolio",
+  "homepage": "https://themidfire.github.io/My-Portfolio",
+  "name": "my-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "vite",
-  "build": "tsc && vite build",
-  "preview": "vite preview --port 4173",
-  "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-  "deploy": "npm run build && gh-pages -d dist"
-},
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview --port 4173",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-avatar": "^1.1.11",
