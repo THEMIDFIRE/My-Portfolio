@@ -23,7 +23,7 @@ export default function About() {
     return (
         <aside className='w-full h-fit md:max-w-1/3 order-2 md:order-1'>
             <Card className="text-center p-6 shadow-xl flex flex-col items-center gap-3 bg-gray-100 dark:bg-slate-800">
-                <Avatar className='size-40'>
+                <Avatar className='size-36'>
                     <AvatarImage src={data?.avatar_url} />
                     <AvatarFallback>
                         <span>MM</span>
@@ -35,9 +35,9 @@ export default function About() {
                 <p className="text-slate-500 dark:text-slate-400 text-center animate-pulse">
                     {data?.bio}
                 </p>
-                <p>
+                {data?.company && <p>
                     {data?.company}
-                </p>
+                </p>}
                 <div className="flex flex-col gap-3">
                     <div className="flex gap-2 items-center">
                         <Smartphone />

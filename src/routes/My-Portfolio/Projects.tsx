@@ -23,8 +23,8 @@ function RouteComponent() {
             {isLoading ? <div className='w-full grow md:max-h-[calc(100vh-7rem)] xl:max-h-dvh rounded-2xl md:overflow-y-auto mb-6 md:mb-0 lg:py-7 order-2 self-center'>
                 <CircleLoader color={`${theme === `dark` ? `#e5e5e5` : `#90a1b9`}`} loading={true} size={110} className="mx-auto"/>
             </div> : 
-            <section className='w-full grow h-fit sm:max-h-[calc(100vh-7rem)] md:max-h-screen xl:max-h-[calc(100vh-1rem)] rounded-2xl overflow-y-auto mb-6 md:mb-0 order-2'>
-                <div className="container grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 overflow-y-auto">
+            <section className='w-full grow h-fit sm:max-h-[calc(100vh-7rem)] md:max-h-screen xl:max-h-3/4 overflow-y-auto rounded-2xl overflow-y-none mb-6 md:mb-0 order-2'>
+                <div className="container grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-5 md:max-h-screen xl:max-h-[calc(100vh-7rem)]">
                     {data?.map((project: any, index: number) => (
                         <ProjectCard key={index} project={project} />
                     ))}
