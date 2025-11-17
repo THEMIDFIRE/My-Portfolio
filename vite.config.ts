@@ -7,6 +7,7 @@ import { tanstackRouter } from '@tanstack/router-plugin/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/My-Portfolio/',
   plugins: [tanstackRouter({
     target: 'react',
     autoCodeSplitting: true,
@@ -14,7 +15,6 @@ export default defineConfig({
   react(),
   tailwindcss(),
   ],
-  base: '/My-Portfolio/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
