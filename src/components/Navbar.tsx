@@ -28,7 +28,7 @@ export default function Navbar() {
         <>
             <NavigationMenu className="sticky top-0 z-50 max-w-full w-full mx-auto justify-evenly py-5 hidden md:flex bg-white dark:bg-slate-900/50 backdrop-blur-xl">
                 <Button variant={"link"}>
-                    <Link to="/My-Portfolio" className="text-sm flex gap-2 items-center justify-center">
+                    <Link to="/" className="text-sm flex gap-2 items-center justify-center">
                         <ArrowBigLeftDash className="size-4" /> <span className="hidden sm:block">Go Home</span>
                     </Link>
                 </Button>
@@ -36,12 +36,12 @@ export default function Navbar() {
                 <NavigationMenuList className="gap-6 hidden md:flex">
                     <NavigationMenuItem>
                         <NavigationMenuLink asChild>
-                            <Link to="/My-Portfolio/Projects" className="[&.active]:border-2 [&.active]:border-primary [&.active]:rounded-lg [&.active]:p-2 text-xl">Projects</Link>
+                            <Link to="/Projects" className="[&.active]:border-2 [&.active]:border-primary [&.active]:rounded-lg [&.active]:p-2 text-xl">Projects</Link>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <NavigationMenuLink asChild>
-                            <Link to="/My-Portfolio/Services" className="[&.active]:border-2 [&.active]:border-primary [&.active]:rounded-lg [&.active]:p-2 text-xl">Services</Link>
+                            <Link to="/Services" className="[&.active]:border-2 [&.active]:border-primary [&.active]:rounded-lg [&.active]:p-2 text-xl">Services</Link>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
                 </NavigationMenuList>
@@ -49,7 +49,7 @@ export default function Navbar() {
             {/* Mobile menu */}
             <NavigationMenu className="sticky top-0 z-50 max-w-full w-full mx-auto justify-evenly py-6 md:hidden bg-white dark:bg-slate-900/50 backdrop-blur-xl">
                 <Button variant={"link"}>
-                    <Link to="/My-Portfolio" className="text-sm flex gap-2 items-center justify-center">
+                    <Link to="/" className="text-sm flex gap-2 items-center justify-center">
                         <ArrowBigLeftDash className="size-4" /> <span className="hidden sm:block">Go Home</span>
                     </Link>
                 </Button>
@@ -64,12 +64,12 @@ export default function Navbar() {
                                 <DropdownMenuGroup>
                                     <DropdownMenuItem>
                                         <NavigationMenuLink>
-                                            <Link to="/My-Portfolio/Projects" className="[&.active]:border-2 [&.active]:border-primary [&.active]:rounded-lg [&.active]:p-2 text-xl">Projects</Link>
+                                            <Link to="/Projects" className="[&.active]:border-2 [&.active]:border-primary [&.active]:rounded-lg [&.active]:p-2 text-xl">Projects</Link>
                                         </NavigationMenuLink>
                                     </DropdownMenuItem>
                                     <DropdownMenuItem>
                                         <NavigationMenuLink>
-                                            <Link to="/My-Portfolio/Services" className="[&.active]:border-2 [&.active]:border-primary [&.active]:rounded-lg [&.active]:p-2 text-xl">Services</Link>
+                                            <Link to="/Services" className="[&.active]:border-2 [&.active]:border-primary [&.active]:rounded-lg [&.active]:p-2 text-xl">Services</Link>
                                         </NavigationMenuLink>
                                     </DropdownMenuItem>
                                 </DropdownMenuGroup>

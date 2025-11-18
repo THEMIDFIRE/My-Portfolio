@@ -1,12 +1,12 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { createRouter, RouterProvider } from '@tanstack/react-router'
+import { createHashHistory, createRouter, RouterProvider } from '@tanstack/react-router'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { ThemeProvider } from './components/ui/theme-provider.tsx'
 import './index.css'
 import { routeTree } from './routeTree.gen.ts'
 
-const router = createRouter({ routeTree})
+const router = createRouter({ routeTree, history: createHashHistory()})
 const queryClient = new QueryClient()
 
 declare module '@tanstack/react-router' {

@@ -1,7 +1,7 @@
 import ServiceCard from '@/components/ServiceCard'
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/My-Portfolio/Services')({
+export const Route = createFileRoute('/Services')({
   component: RouteComponent,
 })
 

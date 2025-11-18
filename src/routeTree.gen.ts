@@ -9,93 +9,86 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as MyPortfolioIndexRouteImport } from './routes/My-Portfolio/index'
-import { Route as MyPortfolioServicesRouteImport } from './routes/My-Portfolio/Services'
-import { Route as MyPortfolioProjectsRouteImport } from './routes/My-Portfolio/Projects'
+import { Route as ServicesRouteImport } from './routes/Services'
+import { Route as ProjectsRouteImport } from './routes/Projects'
+import { Route as IndexRouteImport } from './routes/index'
 
-const MyPortfolioIndexRoute = MyPortfolioIndexRouteImport.update({
-  id: '/My-Portfolio/',
-  path: '/My-Portfolio/',
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/Services',
+  path: '/Services',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MyPortfolioServicesRoute = MyPortfolioServicesRouteImport.update({
-  id: '/My-Portfolio/Services',
-  path: '/My-Portfolio/Services',
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/Projects',
+  path: '/Projects',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MyPortfolioProjectsRoute = MyPortfolioProjectsRouteImport.update({
-  id: '/My-Portfolio/Projects',
-  path: '/My-Portfolio/Projects',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/My-Portfolio/Projects': typeof MyPortfolioProjectsRoute
-  '/My-Portfolio/Services': typeof MyPortfolioServicesRoute
-  '/My-Portfolio': typeof MyPortfolioIndexRoute
+  '/': typeof IndexRoute
+  '/Projects': typeof ProjectsRoute
+  '/Services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
-  '/My-Portfolio/Projects': typeof MyPortfolioProjectsRoute
-  '/My-Portfolio/Services': typeof MyPortfolioServicesRoute
-  '/My-Portfolio': typeof MyPortfolioIndexRoute
+  '/': typeof IndexRoute
+  '/Projects': typeof ProjectsRoute
+  '/Services': typeof ServicesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/My-Portfolio/Projects': typeof MyPortfolioProjectsRoute
-  '/My-Portfolio/Services': typeof MyPortfolioServicesRoute
-  '/My-Portfolio/': typeof MyPortfolioIndexRoute
+  '/': typeof IndexRoute
+  '/Projects': typeof ProjectsRoute
+  '/Services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/My-Portfolio/Projects'
-    | '/My-Portfolio/Services'
-    | '/My-Portfolio'
+  fullPaths: '/' | '/Projects' | '/Services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/My-Portfolio/Projects' | '/My-Portfolio/Services' | '/My-Portfolio'
-  id:
-    | '__root__'
-    | '/My-Portfolio/Projects'
-    | '/My-Portfolio/Services'
-    | '/My-Portfolio/'
+  to: '/' | '/Projects' | '/Services'
+  id: '__root__' | '/' | '/Projects' | '/Services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  MyPortfolioProjectsRoute: typeof MyPortfolioProjectsRoute
-  MyPortfolioServicesRoute: typeof MyPortfolioServicesRoute
-  MyPortfolioIndexRoute: typeof MyPortfolioIndexRoute
+  IndexRoute: typeof IndexRoute
+  ProjectsRoute: typeof ProjectsRoute
+  ServicesRoute: typeof ServicesRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/My-Portfolio/': {
-      id: '/My-Portfolio/'
-      path: '/My-Portfolio'
-      fullPath: '/My-Portfolio'
-      preLoaderRoute: typeof MyPortfolioIndexRouteImport
+    '/Services': {
+      id: '/Services'
+      path: '/Services'
+      fullPath: '/Services'
+      preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/My-Portfolio/Services': {
-      id: '/My-Portfolio/Services'
-      path: '/My-Portfolio/Services'
-      fullPath: '/My-Portfolio/Services'
-      preLoaderRoute: typeof MyPortfolioServicesRouteImport
+    '/Projects': {
+      id: '/Projects'
+      path: '/Projects'
+      fullPath: '/Projects'
+      preLoaderRoute: typeof ProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/My-Portfolio/Projects': {
-      id: '/My-Portfolio/Projects'
-      path: '/My-Portfolio/Projects'
-      fullPath: '/My-Portfolio/Projects'
-      preLoaderRoute: typeof MyPortfolioProjectsRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  MyPortfolioProjectsRoute: MyPortfolioProjectsRoute,
-  MyPortfolioServicesRoute: MyPortfolioServicesRoute,
-  MyPortfolioIndexRoute: MyPortfolioIndexRoute,
+  IndexRoute: IndexRoute,
+  ProjectsRoute: ProjectsRoute,
+  ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

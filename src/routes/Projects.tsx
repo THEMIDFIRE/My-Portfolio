@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query'
 import { createFileRoute } from '@tanstack/react-router'
 import CircleLoader from 'react-spinners/CircleLoader'
 
-export const Route = createFileRoute('/My-Portfolio/Projects')({
+export const Route = createFileRoute('/Projects')({
     component: RouteComponent,
 })
 
