@@ -6,11 +6,9 @@ import { Card } from './ui/card'
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 import { useQuery } from '@tanstack/react-query'
 import API from '../lib/API'
-import { useRouterState } from '@tanstack/react-router'
 
 export default function About() {
-    const routerState = useRouterState()
-    const showReposNum = !routerState.location.pathname.endsWith('/') && !routerState.location.pathname.endsWith('/My-Portfolio')
+    const showReposNum = !window.location.pathname.endsWith('/') && !window.location.pathname.endsWith('/My-Portfolio')
 
 
     const { data } = useQuery({
@@ -45,7 +43,7 @@ export default function About() {
                     </div>
                     <div className="flex gap-2 items-center">
                         <Mail className="text-xl" />
-                        <p>chaoticoder@gmail.com</p>
+                        <p>mohamedelsharaby202@gmail.com</p>
                     </div>
                     <div className="flex gap-2 items-center">
                         <MapPin className="text-xl" />
@@ -101,7 +99,7 @@ export default function About() {
                         </PopoverTrigger>
                         <PopoverContent className='max-w-fit space-y-2'>
                             <a href="https://github.com/THEMIDFIRE" target="_blank" className="flex gap-2 items-center hover:underline underline-offset-4"><IconBrandGithub />Github</a>
-                            <a href="https://linkedin.com/in/THEMIDFIRE" target="_blank" className="flex gap-2 items-center hover:underline underline-offset-4"><IconBrandLinkedin />Linkedin</a>
+                            <a href="https://linkedin.com/in/mmagdysharaby" target="_blank" className="flex gap-2 items-center hover:underline underline-offset-4"><IconBrandLinkedin />Linkedin</a>
                             <a href="https://twitter.com/TH3MIDFIRE" target="_blank" className="flex gap-2 items-center hover:underline underline-offset-4"><IconBrandTwitter />Twitter</a>
                             <a href="https://facebook.com/TH3MIDFIRE" target="_blank" className="flex gap-2 items-center hover:underline underline-offset-4"><IconBrandFacebook />Facebook</a>
                             <a href="https://instagram.com/themidfire.dev" target="_blank" className="flex gap-2 items-center hover:underline underline-offset-4"><IconBrandInstagram />Instagram</a>
